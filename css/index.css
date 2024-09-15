@@ -1,0 +1,31 @@
+.corpo {
+    background-color: rgb(223, 52, 52);
+}
+
+.row {
+    padding-top: 30px;
+}
+
+.col {
+    padding-top: 20px;
+    margin-right: 50px;
+}
+
+.card {
+    height: 100%;
+}
+
+.botao_card {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+.rodape {
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    padding-top: 10px;
+
+}
