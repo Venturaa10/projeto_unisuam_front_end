@@ -1,0 +1,45 @@
+.corpo {
+    background-color: rgb(223, 52, 52);
+}
+.navbar bg-body-tertiary {
+    position: fixed;
+    margin-top: 590px;
+}
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.card {
+    /* Estiliza a borda do card de login */
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+
+    
+    text-align: center;
+    padding: 5px;
+    width: 45%; /* Tamanho da largura do card */
+
+}
+.formulario {
+    /* Centraliza os inputs do formulario e coloca um por linha */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.formulario input {
+    /* Estiliza os campos de input do login */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.botao_login {
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 8px;
+}
