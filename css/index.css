@@ -2,6 +2,10 @@
     background-color: rgb(228, 228, 228);
 }
 
+.link_frase {
+    font-size: 15px;
+    font-weight: bold;
+}
 
 .row {
     padding-top: 30px;
@@ -19,8 +23,7 @@
 .botao_card {
     color: rgb(0, 0, 0);
     font-weight: bold;
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 
 .rodape {
