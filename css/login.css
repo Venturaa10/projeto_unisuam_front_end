@@ -23,9 +23,13 @@
 
     
     text-align: center;
-    padding: 5px;
-    width: 45%; /* Tamanho da largura do card */
+    width: 25%; /* Tamanho da largura do card */
+    height: 135%;
+}
 
+.card-title {
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .formulario {
@@ -40,7 +44,7 @@
     /* Estiliza os campos de input do login */
     border-radius: 8px;
     margin-bottom: 10px;
-    width: 50%;
+    width: 75%;
 }
 
 .botao_login {
