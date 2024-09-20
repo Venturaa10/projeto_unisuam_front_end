@@ -47,12 +47,16 @@
     width: 75%;
 }
 
-.botao_login {
+.botao_login, .botao_limpar {
     font-weight: bold;
     color: white;
     background-color: black;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 8px;
+}
+
+.botao_limpar {
+    margin-left: 15px;
 }
 
 .navbar-nav{

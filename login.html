@@ -43,11 +43,14 @@
         <h4 class="card-title">Logar</h4>
       </div>
       <form class="formulario" action="">
-        <input type="text" placeholder="Nome do Torcedor" required>
-        <input type="password" placeholder="Senha" required>
+        <input type="text" placeholder="Nome do Torcedor" maxlength="6" required>
+        <input type="password" placeholder="Senha" maxlength="8" required>
+      <div>
+        <button class="botao_login" type="submit"> Entrar </button>
+        <button class="botao_limpar" type="reset"> Limpar </button>
+      </div>
       </form>
       <div class="card-body">
-        <button class="botao_login" type="submit"> Entrar </button>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="alterar_senha">
             <a class="nav-link active" style="color: rgb(0, 0, 0);" aria-current="page" href="alterar_senha.html">Alterar Senha</a>

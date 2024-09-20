@@ -7,18 +7,17 @@
     font-weight: bold;
 }
 
-.container text-center {
-    max-width: 100%;
-}
 
 .row {
-    margin-left: 20%;
-    padding-top: 40px;
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 50px 0;
 }
 
 .col {
-    border: 10px solid black;
-    margin-right: 50px;
+    /* border: 10px solid black; */
+    padding: 15px;
+
 }
 
 .card {
