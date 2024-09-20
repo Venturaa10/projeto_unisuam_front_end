@@ -1,8 +1,12 @@
 /* Destinada aos mesmos estilos usados em diferentes arquivos html */
 
+.navbar {
+    height: 100%;
+}
+
 .titulo_principal {
     color: red;
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
     font-style: normal;
 }
@@ -13,6 +17,16 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-transform: uppercase;
+    height: 120px;
+
+}
+
+.collapse {
+    padding-left: 30px;
+}
+
+.nav-item {
+    font-size: 18px;
 }
 
 .navbar-toggler-icon {
