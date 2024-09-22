@@ -42,24 +42,29 @@
     align-items: center;
 }
 
-.formulario input {
+input {
     /* Estiliza os campos de input do login */
     border-radius: 8px;
     margin-bottom: 10px;
     width: 75%;
 }
 
-.botao_login, .botao_limpar {
+.botoes {
+    /* flex -> Permite tornar o container flexivel, permitindo a organização dos elementos em linha */
+    display: flex; 
+    justify-content: space-between; /* Espaçamento uniforme entre os elementos*/
+    gap: 10px; /* Espaço entre os elementos */
+}
+
+.form-control {
     font-weight: bold;
     color: white;
     background-color: black;
     border-radius: 6px;
+    margin-top: 5px;
     padding: 8px;
 }
 
-.botao_limpar {
-    margin-left: 15px;
-}
 
 .navbar-nav{
     padding-top: 10px;

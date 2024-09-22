@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-.titulo_principal {
+.navbar-brand {
     color: red;
     font-size: 27px;
     font-weight: bold;
@@ -17,7 +17,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     text-transform: uppercase;
-    height: 120px;
 
 }
 
