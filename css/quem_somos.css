@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif; /* Define uma fonte agradável para o corpo */
-    background-image: url(flamengo_maracana_torcida.webp); /* Um fundo leve */
+    background-image: url(/img/fundo_quem_somos.webp); /* Um fundo leve */
     background-size:cover;
     background-repeat:no-repeat;
     display:block;
