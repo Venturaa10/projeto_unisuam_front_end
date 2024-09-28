@@ -42,6 +42,12 @@
     align-items: center;
 }
 
+.login_label{
+    color: rgb(116, 29, 29);
+    font-size: 20px;
+    font-weight: bold;
+}
+
 input {
     /* Estiliza os campos de input do login */
     border-radius: 8px;
