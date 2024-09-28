@@ -3,7 +3,6 @@ body {
     background-size:cover;
     background-repeat:no-repeat;
     display:block;
-
 }
 
 h2 {
@@ -11,7 +10,8 @@ h2 {
     color: #f6f8fa; /* Cor do texto para o título */
     margin-top: 50px; /* Margem no topo */
 }
-    section {
+
+section {
         display: block;
         margin: 50px auto; /* Centraliza a seção horizontalmente e adiciona margem superior */
         width: 450px; /* Largura fixa */
