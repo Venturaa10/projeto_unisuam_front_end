@@ -1,13 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .corpo {
     background-color: rgb(228, 228, 228);
 }
 
-.img-container {
-    width: 100%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-}
 
 .img-fluid {
     width: 100%;
@@ -15,6 +14,11 @@
     object-fit: cover;
     display: block;
 }
+
+.card-img {
+    width: 100%;
+}
+
 .container  {
     padding-top: 50px;
 }
@@ -67,19 +71,52 @@
 .card-footer {
     color: white;
     background-color: black;
-    height: 180px;
+    height: 220px;
     margin-top: 50px;
-    padding-top: 10px;
+    padding: 20px;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
-/* 
-.card-img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    z-index: -1;
-} */
+
+.card-title {
+    font-size: 20px;
+    height: 40px;
+}
+
+#titulo_footer {
+    color: red;
+    text-align: left;
+    font-size: 38px;
+}
+
+.conteudo_footer {
+    display: flex; 
+    flex-wrap: wrap; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  
+.lista {
+    width: 50%; /* Define que cada item ocupará 50% da largura */
+    margin-top: 10px;
+    box-sizing: border-box; 
+    padding: 8px; /* Adiciona um espaço interno, se necessário */
+
+}
+
+.links_footer {
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* Estilos especiais */
+
+/* Estilo do botão para visualizar a noticia */
+.btn:hover {
+    background-color: black;
+    color: red;
+}
