@@ -1,9 +1,9 @@
 /* Destinada aos mesmos estilos usados em diferentes arquivos html */
 .navbar, .container-fluid{
-    background-color: rgb(88, 88, 88) !important;
+    background: #d2232a !important;
     padding-top: 15px; 
     padding-bottom: 15px; 
-    padding-left: 20px;
+    padding-left: 6px;
 }
 
 .container-fluid { 
@@ -11,10 +11,12 @@
 
 }
 .navbar-text {
-    color: rgb(0, 0, 0);
-    font-size: 27px;
-    font-weight: bold;
-    font-style: normal;
+    font-size: 28px;
+    font-weight: 900;
+    font-family: 'Rajdhani', sans-serif;
+    margin-left: 60px;
+    text-transform: uppercase;
+    color: #000;
 }
 
 .collapse {
@@ -23,9 +25,11 @@
 
 
 .nav-link {
-    color: white;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 40px;
+    color: #fff;
+    font-family: Rajdhani, sans-serif;
 
 }
 
