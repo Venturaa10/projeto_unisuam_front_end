@@ -7,19 +7,19 @@
 }
 
 .row {
-    width: 940px;
+    width: 1000px;
     margin: 0 auto;
-    padding: 25px 25px 0;
+    padding: 20px 0px 0;
 }
 
 .card {
-    height: 27rem;
-    width: 26rem; 
+    height: 29rem;
+    width: 29rem; 
     overflow: hidden; 
 }
 
 .card-img-top {
-    height: 18rem;
+    height: 19rem;
     width: 100%;  
     object-fit: cover; 
     object-position: center; 
