@@ -1,68 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/reset.css"> <!-- Remove os estilos criados pelo navegador --> 
+    <title>Quem Somos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/reset.css"> <!-- Remove os estilos criados pelo navegador -->
     <link rel="stylesheet" href="/css/quem_somos.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- Codigo responsavel pela herança da barra de navegação -->
+      <!-- Codigo responsavel pela herança da barra de navegação -->
   <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-<script>
+  <script>
     async function loadNavbar() {
-        try {
-            const response = await fetch('base/navbar.html'); 
-            const navbar = await response.text();
-            document.getElementById('navbar').innerHTML = navbar; 
-        } catch (error) {
-            console.error('Erro ao carregar a barra de navegação:', error);
-        }
+      try {
+        const response = await fetch('base/navbar.html');
+        const navbar = await response.text();
+        document.getElementById('navbar').innerHTML = navbar;
+      } catch (error) {
+        console.error('Erro ao carregar a barra de navegação:', error);
+      }
     }
     loadNavbar();
-</script>
+  </script>
   <!-- Codigo responsavel pela herança da barra de navegação -->
 
-
-    <section class="possição">
-        <h2>cadraste-se e receba novidades</h2>
-        <form action="" method="post">
-            <label style="color: #f3efef;">nome</label>
-            <input type="text" name="nome" placeholder="digete seu nome" autocomplete="off" required>
-            <label style="color: #f3efef;">email</label>
-            <input type="email" name="email" placeholder="digete seu email" required>
-            <label style="color: #f3efef;">mensagem</label>
-            <textarea name="massage" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
-            <button type="submit">enviar</button>
-        </form>
+    <section class="sessão">
+        <div class="conteiner">
+            <h1>Nosso time</h1>
+            <p class="descrição">Somos três estudantes do curso de Análise e Desenvolvimento de Sistemas (ADS) da UNISUAM, apaixonados por tecnologia e, claro, pelo Flamengo! Juntos, decidimos unir nossos conhecimentos acadêmicos com nossa paixão pelo futebol, criando uma plataforma para manter os torcedores sempre atualizados sobre o Mengão. Nosso objetivo é trazer informações precisas e relevantes sobre o time, desde análises de jogos até curiosidades dos bastidores. Queremos que nossa iniciativa não só informe, mas também una os flamenguistas em torno do amor pelo clube. Afinal, somos estudantes, desenvolvedores e, acima de tudo, torcedores!</p>
+            <div class="divcenter">
+                <div class="os-menbros">
+                    <img src="/img/foto de perfil.png" alt="Ryan silva">
+                    <h3>Ryan Silva</h3>
+                    <p class="position">Desenvolvedor FE</p>
+                    <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/img/github.png" alt="Facebook"></a>
+                        <a href="#"><img src="/img/instagram.png" alt="Twitter"></a>
+                        <a href="#"><img src="/img/linkedin.png" alt="Instagram"></a>
+                    </div>
+                    <br>
+                </div>
+                <div class="os-menbros">
+                    <img src="/img/foto de perfil.png" alt="João ventura">
+                    <h3>João Ventura</h3>
+                    <p class="position">Desenvolvedor FE</p>
+                    <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/img/github.png" alt="Facebook"></a>
+                        <a href="#"><img src="/img/instagram.png" alt="Twitter"></a>
+                        <a href="#"><img src="/img/linkedin.png" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="os-menbros">
+                    <img src="/img/foto de perfil.png" alt="Pyetro de jesus">
+                    <h3>Pyetro de Jesus</h3>
+                    <p class="position">Desenvolvedor FE</p>
+                    <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="/img/github.png" alt="Facebook"></a>
+                        <a href="#"><img src="/img/instagram.png" alt="Twitter"></a>
+                        <a href="#"><img src="/img/linkedin.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer>
-        <div class="card text-center">
-            <div class="card-header">
-              <ul class="nav nav-pills card-header-pills">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-    </footer>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Link Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> <!--Link Bootstrap-->
 </body>
 </html>

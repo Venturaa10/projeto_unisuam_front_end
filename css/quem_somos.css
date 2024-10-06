@@ -1,57 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    background-image: url(/img/fundo_quem_somos.webp); /* Um fundo leve */
-    background-size:cover;
-    background-repeat:no-repeat;
-    display:block;
+    background-color: #f4f4f4;
 }
 
-h2 {
-    text-align: center; /* Centraliza o título 'contatos' */
-    color: #f6f8fa; /* Cor do texto para o título */
-    margin-top: 50px; /* Margem no topo */
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
-section {
-        display: block;
-        margin: 50px auto; /* Centraliza a seção horizontalmente e adiciona margem superior */
-        width: 450px; /* Largura fixa */
-        padding: 10px 45px;
-        border: 1px solid #343a40; /* Borda ao redor da seção */
-        border-radius: 20px; /* Cantos arredondados */
-        background-color: black; /* Fundo preto para a seção */
-    }
-    
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-form {
+.descrição {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.divcenter {
     display: flex;
-    flex-direction: column; /* Organiza os elementos do form na coluna */
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-label {
-    margin-top: 10px; /* Margem no topo dos labels */
-    font-weight: bold; /* Destaca os labels */
+.os-menbros {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 10px; /* Espaçamento interno */
-    margin-top: 5px; /* Margem superior */
-    border: 1px solid #ced4da; /* Borda padrão */
-    border-radius: 4px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte */
+.os-menbros img {
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-button {
-    margin-top: 15px; /* Margem no topo do botão */
-    padding: 10px; /* Espaçamento interno do botão */
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: white; /* Cor do texto do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 4px; /* Bordas arredondadas para o botão */
-    cursor: pointer; /* Muda o cursor para mão ao passar o mouse */
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
 
-button:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+.position {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 5px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
 }
