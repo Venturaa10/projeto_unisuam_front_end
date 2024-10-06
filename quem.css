@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.descrição {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.divcenter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.os-menbros {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.os-menbros img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.position {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 5px;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
