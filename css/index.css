@@ -48,7 +48,6 @@
 .card-footer {
     background: #d2232a !important;
     color: white;
-    height: 220px;
     margin-top: 50px;
     padding: 20px;
     text-align: center;
@@ -73,23 +72,30 @@
     list-style-type: none; 
     padding: 0; 
     margin: 0; 
-  }
-  
-.lista {
-    width: 50%; /* Define que cada item ocupará 50% da largura */
-    margin-top: 10px;
-    box-sizing: border-box; 
-    padding: 8px; /* Adiciona um espaço interno, se necessário */
+}
 
+.lista {
+    width: 33.33%; /* Cada item ocupará 33.33% da largura */
+    margin-top: 10px; 
+    box-sizing: border-box; 
+    padding: 8px; 
+}
+
+.nome_dev {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 
 .links_footer {
     color: rgb(0, 0, 0);
     font-size: 20px;
-    text-decoration: none;
-    text-transform: none;
+    font-weight: 800;
+    text-decoration: underline;
+    text-transform: capitalize;
 }
-
 
 /* Estilos especiais */
 
