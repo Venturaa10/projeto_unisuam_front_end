@@ -1,5 +1,8 @@
+
 .corpo {
-    background-color: rgb(228, 228, 228);
+    background-image:url(FLAMENGO\ 2\ fluminenC\ 0\ ❤🖤😍.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container  {
@@ -41,10 +44,15 @@
 
 .card a {
     border-radius: 45px;
+<<<<<<< HEAD
     margin-top: 6px;
     margin-bottom: 15px;
     width: max-content;
     background-color: rgb(120, 9, 27);
+=======
+    margin-top: 15px;
+    background-color: #9b071f;
+>>>>>>> dc2775794e9dc09aeacef8fcde179b0527adbebe
     color: rgb(255, 255, 255);
     font-family:Arial, Helvetica, sans-serif;
     text-transform: uppercase;
@@ -53,8 +61,9 @@
     padding: 8px 8px;
 }
 
+
 .card-footer {
-    background: #d2232a !important;
+    background: #1d1c1c !important;
     color: white;
     margin-top: 50px;
     padding: 20px;
@@ -69,7 +78,7 @@
 }
 
 #titulo_footer {
-    color: rgb(0, 0, 0);
+    color:#9b071f;
     text-align: left;
     font-size: 36px;
     font-weight: bold;
@@ -100,7 +109,7 @@
 }
 
 .links_footer {
-    color: rgb(0, 0, 0);
+    color:#fff;
     font-size: 20px;
     font-weight: 800;
     text-decoration: underline;
@@ -111,6 +120,6 @@
 
 /* Estilo do botão para visualizar a noticia */
 .btn:hover {
-    background-color: black;
-    color: red;
+    background-color: #000000;
+    color: #ff0000;
 }
