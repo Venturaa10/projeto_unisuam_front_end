@@ -16,6 +16,7 @@
     height: 29rem;
     width: 29rem; 
     overflow: hidden; 
+    align-items: center;
 }
 
 .card-img-top {
@@ -26,19 +27,23 @@
 }
 
 .card-body {
-    margin-top: 10px;
+    padding-top: 15px;
 }
 
 .texto_card {
-    font-size: 1rem;
-    line-height: 1rem;
-    font-weight: 600;
-    color: #666;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Rajdhani, sans-serif;
+    color: #333;
+    max-height: 60px;
+    height: 60px;
 }
 
-.btn {
+.card a {
     border-radius: 45px;
-    margin-top: 15px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    width: max-content;
     background-color: rgb(120, 9, 27);
     color: rgb(255, 255, 255);
     font-family:Arial, Helvetica, sans-serif;
@@ -66,7 +71,9 @@
 #titulo_footer {
     color: rgb(0, 0, 0);
     text-align: left;
-    font-size: 38px;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Rajdhani, sans-serif;
 }
 
 .conteudo_footer {
