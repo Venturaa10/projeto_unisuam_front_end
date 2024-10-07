@@ -44,15 +44,8 @@
 
 .card a {
     border-radius: 45px;
-<<<<<<< HEAD
-    margin-top: 6px;
-    margin-bottom: 15px;
-    width: max-content;
-    background-color: rgb(120, 9, 27);
-=======
     margin-top: 15px;
     background-color: #9b071f;
->>>>>>> dc2775794e9dc09aeacef8fcde179b0527adbebe
     color: rgb(255, 255, 255);
     font-family:Arial, Helvetica, sans-serif;
     text-transform: uppercase;
