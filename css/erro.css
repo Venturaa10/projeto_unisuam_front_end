@@ -1,11 +1,11 @@
 body {
-    background: rgb(124, 122, 122);
-    color: rgb(255, 255, 255);
+    background: #7c7a7a;
+    color: #ffffff;
 }
 
 h1, h3 {
     text-align: center;
-    font-size: 80px;
+    font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
 
@@ -13,7 +13,7 @@ h1, h3 {
 
 h3 {
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 img {
@@ -26,7 +26,7 @@ img {
 }
 
 button {
-    background-color: rgb(120, 9, 27);
+    background-color: #9b071f;
     font-weight: 700;
     padding: 15px 15px;
     border-radius: 6px 6px;

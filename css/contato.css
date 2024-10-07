@@ -1,13 +1,9 @@
 
-/* *{
-    margin: 0%;
-    padding: 2%;
-    box-sizing: border-box;
-    font-family: sans-serif;
-} */
- 
 body{
-    background-color: rgb(7, 7, 7);
+    background-image: url(poste\ 01.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:  Geneva, Tahoma, sans-serif;
 }
 .container{
     margin-top: 25px;
@@ -16,25 +12,25 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 8px 40px;
-    background-color: black;
+    background-image: url(popste\ 02.jpeg);
     width: 500px;
-    box-shadow: rgba(233, 224, 224, 0.4) 0px 2px 4px, rgba(158, 151, 151, 0.3) 0px 7px 13px -3px, rgba(158, 149, 149, 0.2) 0px -3px 0px inset;
+    border-radius: 20px;
    
 }
 .container h2{
-    color: white;
-    font-size: 2.5rem;
+    color: #ffffff;
+    font-size: 40px;
     margin: 2rem;
 }
 
 .container form{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
 }
 
 form label{
-    color: white;
+    color: #ffffff;
     text-transform: capitalize;
     font-size: 17px;
     margin-bottom: 4px;
@@ -45,7 +41,7 @@ form input{
     border: 0;
     margin-bottom: 20px;
     font-size: 15px;
-    transition: all 0.5s;
+    border-radius: 8px;
 
 }
 form input:focus{
@@ -57,8 +53,7 @@ form textarea{
     border: 0;
     font-size: 15x;
     margin-bottom: 30px;
-    transition: all 0.5s;
-
+    border-radius: 8px;
 }
 form textarea:focus{
     border-radius: 16px;
@@ -67,27 +62,24 @@ form button{
     padding: 15px;
     cursor: pointer;
     font-size: 16px;
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    transition: all 1s;
+    border: 1px solid #ffffff;
+    color: #fff;
     margin-bottom: 20px;
+    border-radius: 8px;
+    background-color:  #ff0000;
 }
 form button:hover{
-    background: white;
-    color: black;
-    border-radius: 16px;
+    color: #0c0b0b;
+   
 }
 
-
-.main{
+/* .main{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height:100vh;
-    background:black ;
-    flex-direction: column;
-}
+} */
+
 .text{
     font-size:45px ;
     color:white ;
@@ -99,11 +91,10 @@ form button:hover{
 }
 .btn{
     padding: 15px;
-    background: white;
+    background: #ffffff;
     text-decoration: none;
-    color: black;
+    color: #000000;
     font-size: 18px;
-    transition: all0.5s;  
 }
 .btn:hover{
     border-radius: 16px;

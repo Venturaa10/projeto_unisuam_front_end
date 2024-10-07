@@ -1,6 +1,6 @@
 /* Destinada aos mesmos estilos usados em diferentes arquivos html */
 .navbar, .container-fluid{
-    background: #d2232a !important;
+    background: #111111 !important;
     padding-top: 15px; 
     padding-bottom: 15px; 
     padding-left: 6px;
@@ -16,7 +16,7 @@
     font-family: 'Rajdhani', sans-serif;
     margin-left: 60px;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
 }
 
 .collapse {
@@ -25,7 +25,7 @@
 
 
 .nav-link {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 40px;
     color: #fff;
@@ -41,5 +41,5 @@
 /* Estilos especiais */
 
 .nav-link:hover {
-    color: rgb(0, 0, 0);
+    color:  #ff0000;
 }
