@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/reset.css"> <!-- Remove os estilos criados pelo navegador -->
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <!-- Codigo responsavel pela herança da barra de navegação -->
+    <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
+    <script>
+        async function loadNavbar() { // Função para lidar com o carregamento de arquivos
+            try {
+                const response = await fetch('base/navbar.html'); // Busca o caminho do arquivo e armazena na const 
+                const navbar = await response.text(); // Carrega o arquivo e converte para texto, para que seja manipulado
+                document.getElementById('navbar').innerHTML = navbar; // Inserindo o conteudo armazenado na const "navbar" e o substituindo no id="navbar"
+            } catch (error) { // Caso ocorra algum erro no carregamento, exibe uma mensagem no console
+                console.error('Erro ao carregar a barra de navegação:', error);
+            }
+        }
+
+        loadNavbar(); // Chama a função para carregar o arquivo
+    </script>
+    <!-- Codigo responsavel pela herança da barra de navegação -->
+
+    <div class="login-container">
+        <h1> Fla Cadastro</h1>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Nome Completo" maxlength="80" minlength="15" required>
+            <input type="text" name="username" placeholder="Email" required>
+            <input type="date" name="username" placeholder="Data de Nascimento" required>
+            <input type="text" name="username" placeholder="CPF" required>
+            <input type="text" name="username" placeholder="CEP" required>
+            <input type="text" name="username" placeholder="Rua" required>
+            <input type="text" name="username" placeholder="Número" required>
+            <input type="text" name="username" placeholder="Bairro" required>
+            <input type="text" name="username" placeholder="Cidade" required>
+            <input type="text" name="username" placeholder="Estado" required>
+            <input type="password" name="username" placeholder="Senha" required>
+            <input type="password" name="username" placeholder="Confirmar Senha" required>
+            <input type="text" name="username" placeholder="Sexo" required>
+            <input type="text" name="password" placeholder="Celular" required>
+            <input type="text" name="password" placeholder="Telefone Fixo" required>
+            <input type="submit" value="Cadastrar">
+            <br>
+            <br>
+            <input type="submit" value="Limpar">
+        </form>
+    </div>
+</body>
+
+</html>
