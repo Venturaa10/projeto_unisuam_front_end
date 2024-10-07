@@ -35,6 +35,7 @@ form label{
     font-size: 17px;
     margin-bottom: 4px;
 }
+
 form input{
     padding: 15px;
     outline: none;
@@ -44,9 +45,11 @@ form input{
     border-radius: 8px;
 
 }
+
 form input:focus{
     border-radius: 16px;
 }
+
 form textarea{
     padding: 10px;
     outline: none;
@@ -55,9 +58,11 @@ form textarea{
     margin-bottom: 30px;
     border-radius: 8px;
 }
+
 form textarea:focus{
     border-radius: 16px;
 }
+
 form button{
     padding: 15px;
     cursor: pointer;
@@ -68,13 +73,6 @@ form button{
     border-radius: 8px;
     background-color:  #ff0000;
 }
-
-/* .main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height:100vh;
-} */
 
 .text{
     font-size:45px ;

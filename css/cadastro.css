@@ -1,67 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #bb0e0e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120vh;
-    margin: 0;
+    background: #181616;
 }
-.login-container {
-    background-color: #fff;
-    padding: 40px;
+
+.container {
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    text-align: center;
-}
-.login-container h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-.login-container input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    margin-top: 10px;
+    background-image: url(/img/img_cadastro/fundo_cadastro3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 500px;
+    padding: 5px 15px;
 }
 
-
-.login-container input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+h1 {
+    color: #000000;
+    font-size: 40px;
+    font-family:  Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
-.login-container input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+form {
+    margin: 8px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
-.login-container input[type="submit"] {
+/* Estiliza Labels */
+label {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 17px;
+    margin-bottom: 4px;
+    text-align: left;
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Estiliza inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
     width: 100%;
-    padding: 10px;
-    background-color: #000000;
-    border: none;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    border-style: solid;
+    border-color: #000000;
     border-radius: 4px;
-    color: #fff;
-    cursor: pointer;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estiliza o tamanho das colunas */
+.col {
+    flex: 1;
+    min-width: 250px;
+
+}
+
+.btn_cadastro {
+    border-radius: 8px;
+    color: #ff0000;
+    background-color: #ffffff;
+    width: max-content;
+    font-weight: bold;
     font-size: 16px;
-}
-.login-container input[type="submit"]:hover {
-    background-color: #9b0f0f;
-}
-.login-container a {
-    color: #000308;
-    text-decoration: none;
-    font-size: 14px;
-}
-.login-container a:hover {
-    text-decoration: underline;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    margin: 15px;
 }
