@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(Flamengo.jpeg);
+    background-image: url(../img/img_quem_somos/fundo_quem_somos.png);
     background-repeat:no-repeat ;
     background-size: cover;
     color: #fff;

@@ -1,21 +1,21 @@
 
 body{
-    background-image: url(poste\ 01.jpeg);
+    background-image: url(../img/img_contato/fundo_contato_1.png);
     background-size: cover;
     background-repeat: no-repeat;
     font-family:  Geneva, Tahoma, sans-serif;
 }
 .container{
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 8px 40px;
-    background-image: url(popste\ 02.jpeg);
+    padding: 8px 30px;
+    background-image: url(../img/img_contato/fundo_contato_2.png);
     width: 500px;
-    border-radius: 20px;
-   
+    height: max-content;
+    border-radius: 20px;   
 }
 .container h2{
     color: #ffffff;
@@ -67,10 +67,6 @@ form button{
     margin-bottom: 20px;
     border-radius: 8px;
     background-color:  #ff0000;
-}
-form button:hover{
-    color: #0c0b0b;
-   
 }
 
 /* .main{
