@@ -5,7 +5,7 @@ body {
 .container {
     border-radius: 8px;
     margin-top: 10px;
-    background-image: url(/img/img_cadastro/fundo_cadastro3.png);
+    background-image: url(../img/img_cadastro/fundo_cadastro3.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
