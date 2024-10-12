@@ -9,26 +9,41 @@
   <link rel="stylesheet" href="/css/reset.css"> <!-- Remove os estilos criados pelo navegador --> 
   <link rel="stylesheet" href="/css/contatox.css">
   <link rel="stylesheet" href="/css/style.css">
-  <title>Contato</title>
+  <title>Login</title>
 </head>
-<body>
-      <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-  
-    <div class="container">
-        <h2>Contato</h2>
-        <form action="" method="post">
-            <label for="nome">Nome</label>
-            <input id="nome" type="text" name="nome" placeholder="digete seu nome" autocomplete="off" required>
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="digete seu email" required>
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="massage" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
-            <button id="botao_contato" type="submit">Enviar</button>
-        </form>
-    </div>
 
-    <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Link Bootstrap-->
+<body class="corpo">
+  <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
+
+  <div class="container">
+    <!-- Inicio da div card -->
+    <div class="card">
+      <div class="card-body">
+        <h1 class="titulo_card">Contato</h1>
+      </div>
+      
+      <form class="formulario" action="">
+        <label class="login_label" for="nome_login">Nome</label>
+        <input class="input_login" id="nome_contato" type="text" placeholder="Nome do Torcedor" minlength="6" maxlength="6" required>
+
+        <label class="login_label" for="senha_login">Email</label>
+        <input class="input_login" id="senha_contato" type="email" placeholder="digite seu e-mal" required>
+
+        <label class="textcenter" for="comentario">Comentário</label>
+        <textarea class="input_login" id="comentario_contato" placeholder="deixe seu comentário" minlength="12" maxlength="115" ></textarea>
+
+      <div class="botoes">
+        <button class="form-control" type="submit"> Enviar </button>
+        <button class="form-control" type="reset"> Limpar </button>
+      </div>
+      </form>
+    </div>
+    <!-- Fim da div card -->
+  </div>
+  <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script> <!--Link Bootstrap-->
 </body>
 
 </html>

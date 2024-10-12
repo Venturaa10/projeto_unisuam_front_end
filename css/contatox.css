@@ -1,5 +1,5 @@
 .corpo {
-    background-image: url(../img/img_login/fundo_login_02.jpeg);
+     background-image: url(../img/img_index/fundo_noticias.png); 
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -19,24 +19,23 @@
 }
 
 .card {
-    background-image: url(../img/img_login/fundo_login_1.png);
+    background-color:#000;
+    opacity: 70%;
     background-size: cover;
     background-repeat: no-repeat;
     /* Estiliza a borda do card de login */
     border-radius: 20px;
-    border-style: solid;
-    border-width: 10px;
-    border: 1px solid #fff;
     text-align: center;
     width: 100%; /* Tamanho da largura do card */
     max-width: 400px;
-    height: 145%;
+    height: 120%;
+    border: none;
 }
 
 .titulo_card {
-    color: #ff0000;
+    color: #fff;
     text-transform: capitalize;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -77,16 +76,16 @@ input:hover{
 }
 
 form textarea{
-    padding: 20px;
+    padding-bottom:40px;
     outline: none;
-    border: 0;
     font-size: 18x;
     margin-bottom: 30px;
-    border-radius: 8px;
+    border-radius: 10px;
+    width: 75%;  
 }
 
 form textarea:focus{
-    border-radius: 16px;
+    padding: px;
 }
 
 
