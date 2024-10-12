@@ -11,30 +11,16 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-      <!-- Codigo responsavel pela herança da barra de navegação -->
   <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-  <script>
-    async function loadNavbar() {
-      try {
-        const response = await fetch('base/navbar.html');
-        const navbar = await response.text();
-        document.getElementById('navbar').innerHTML = navbar;
-      } catch (error) {
-        console.error('Erro ao carregar a barra de navegação:', error);
-      }
-    }
-    loadNavbar();
-  </script>
-  <!-- Codigo responsavel pela herança da barra de navegação -->
 
     <section class="sessão">
         <div class="conteiner">
             <h1>Nosso time</h1>
             <p class="descrição">Somos três estudantes do curso de Análise e Desenvolvimento de Sistemas (ADS) da UNISUAM, apaixonados por tecnologia e, claro, pelo Flamengo! Juntos, decidimos unir nossos conhecimentos acadêmicos com nossa paixão pelo futebol, criando uma plataforma para manter os torcedores sempre atualizados sobre o Mengão. Nosso objetivo é trazer informações precisas e relevantes sobre o time, desde análises de jogos até curiosidades dos bastidores. Queremos que nossa iniciativa não só informe, mas também una os flamenguistas em torno do amor pelo clube. Afinal, somos estudantes, desenvolvedores e, acima de tudo, torcedores!</p>
             <div class="divcenter">
-                <div class="os-menbros">
+                <div class="membros">
                     <img src="/img/img_quem_somos/foto_perfil.png" alt="Ryan silva">
-                    <h3>Ryan Silva</h3>
+                    <h3 class="nome_dev">Ryan Silva</h3>
                     <p class="position">Desenvolvedor FE</p>
                     <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
                     <div class="social-links">
@@ -44,20 +30,20 @@
                     </div>
                     <br>
                 </div>
-                <div class="os-menbros">
+                <div class="membros">
                     <img src="/img/img_quem_somos/foto_perfil.png" alt="João ventura">
-                    <h3>João Ventura</h3>
+                    <h3 class="nome_dev">João Ventura</h3>
                     <p class="position">Desenvolvedor FE</p>
                     <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
                     <div class="social-links">
                         <a target="_blank" href="https://github.com/Venturaa10"><img src="/img/img_quem_somos/github.png" alt="Facebook"></a>
                         <a target="_blank" href="#"><img src="/img/img_quem_somos/instagram.png" alt="Twitter"></a>
-                        <a target="_blank" href="#"><img src="/img/img_quem_somos/linkedin.png" alt="Instagram"></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/jo%C3%A3o-victor-ventura-oliveira/"><img src="/img/img_quem_somos/linkedin.png" alt="Instagram"></a>
                     </div>
                 </div>
-                <div class="os-menbros">
+                <div class="membros">
                     <img src="/img/img_quem_somos/foto_perfil.png" alt="Pyetro de jesus">
-                    <h3>Pyetro de Jesus</h3>
+                    <h3 class="nome_dev">Pyetro de Jesus</h3>
                     <p class="position">Desenvolvedor FE</p>
                     <p class="bio">profissional na area de TI, para saber mais sobre seus trabalhos acompanhe as redes socias.</p>
                     <div class="social-links">
@@ -69,6 +55,8 @@
             </div>
         </div>
     </section>
+
+    <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!--Link Bootstrap-->

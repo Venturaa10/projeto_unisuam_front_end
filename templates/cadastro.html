@@ -11,27 +11,10 @@
     <link rel="stylesheet" href="/css/reset.css"> <!-- Remove os estilos criados pelo navegador -->
     <link rel="stylesheet" href="/css/cadastro.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/scripts/cep.js" defer></script> <!-- Valida CEP -->
-
 </head>
 
 <body>
-    <!-- Codigo responsavel pela herança da barra de navegação -->
     <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-    <script>
-        async function loadNavbar() { // Função para lidar com o carregamento de arquivos
-            try {
-                const response = await fetch('base/navbar.html'); // Busca o caminho do arquivo e armazena na const 
-                const navbar = await response.text(); // Carrega o arquivo e converte para texto, para que seja manipulado
-                document.getElementById('navbar').innerHTML = navbar; // Inserindo o conteudo armazenado na const "navbar" e o substituindo no id="navbar"
-            } catch (error) { // Caso ocorra algum erro no carregamento, exibe uma mensagem no console
-                console.error('Erro ao carregar a barra de navegação:', error);
-            }
-        }
-
-        loadNavbar(); // Chama a função para carregar o arquivo
-    </script>
-    <!-- Codigo responsavel pela herança da barra de navegação -->
 
     <div class="img_fundo">
         <div class="container text-center">
@@ -113,6 +96,8 @@
             </form>
         </div>
 
+        <script src="/scripts/cep.js"></script> <!-- Valida CEP -->
+        <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script> <!--Link Bootstrap-->

@@ -15,22 +15,8 @@
 
 <body class="corpo">
 
-  <!-- Codigo responsavel pela herança da barra de navegação -->
   <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-  <script>
-    async function loadNavbar() {
-      try {
-        const response = await fetch('base/navbar.html'); 
-        const navbar = await response.text();
-        document.getElementById('navbar').innerHTML = navbar;
-      } catch (error) {
-        console.error('Erro ao carregar a barra de navegação:', error);
-      }
-    }
-    loadNavbar();
-  </script>
-  <!-- Codigo responsavel pela herança da barra de navegação -->
- 
+
   <!-- Inicio do Grid -->
 <div class="container text-center">
   <div class="row align-items-center">
@@ -111,14 +97,14 @@
         <li class="lista"><span class="nome_dev">Pyetro Simonim</span></li>
 
       <!-- GitHub -->
-        <li class="lista"><a target="_blank" class="links_footer" href="https://github.com/javacss07">GitHub</a></li>
-        <li class="lista"><a target="_blank" class="links_footer" href="https://github.com/Venturaa10">GitHub</a></li>
-        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html">GitHub</a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="https://github.com/javacss07"><img src="/img/img_quem_somos/github.png" alt="linkedin"></a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="https://github.com/Venturaa10"><img src="/img/img_quem_somos/github.png" alt="linkedin"></a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html"><img src="/img/img_quem_somos/github.png" alt="linkedin"></a></li>
 
       <!-- Linkedln -->
-        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html">Linkedln</a></li>
-        <li class="lista"><a target="_blank" class="links_footer" href="https://www.linkedin.com/in/jo%C3%A3o-victor-ventura-oliveira">Linkedln</a></li>
-        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html">Linkedln</a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html"><img src="/img/img_quem_somos/linkedin.png" alt="linkedin"></a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="https://www.linkedin.com/in/jo%C3%A3o-victor-ventura-oliveira"><img src="/img/img_quem_somos/linkedin.png" alt="linkedin"></a></li>
+        <li class="lista"><a target="_blank" class="links_footer" href="/templates/erro.html"><img src="/img/img_quem_somos/linkedin.png" alt="linkedin"></a></li>
 
 
       </ul>
@@ -127,6 +113,7 @@
   <!-- Fim Rodape -->
 
 
+  <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script> <!--Link Bootstrap-->
