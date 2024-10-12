@@ -43,3 +43,8 @@
 .nav-link:hover {
     color:  #ff0000;
 }
+
+li a .img_carrinho {
+    width: 30px;
+    height: 30px;
+}
