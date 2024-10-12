@@ -11,53 +11,24 @@
   <link rel="stylesheet" href="/css/style.css">
   <title>Contato</title>
 </head>
-
-<body class="corpo">
-
-  <!-- Codigo responsavel pela herança da barra de navegação -->
-  <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
-<script>
-    async function loadNavbar() {
-        try {
-            const response = await fetch('base/navbar.html'); 
-            const navbar = await response.text();
-            document.getElementById('navbar').innerHTML = navbar; 
-        } catch (error) {
-            console.error('Erro ao carregar a barra de navegação:', error);
-        }
-    }
-    loadNavbar();
-</script>
-  <!-- Codigo responsavel pela herança da barra de navegação -->
-
-  <div class="container">
-    <!-- Inicio da div card -->
-    <div class="card">
-      <div class="card-body">
-        <h3 class="titulo_card">Contato</h3>
-      </div>
-      
-      <form class="formulario" action="">
-        <label class="login_label" for="nome_login">Nome</label>
-        <input class="input_login" id="nome_login" type="text" placeholder="Nome do Torcedor" maxlength="8" required>
-
-        <label class="login_label" for="senha_login">Email</label>
-        <input class="input_login" id="senha_login" type="email" placeholder="digite seu e-mal" maxlength="15" required>
-
-        <label class="textcenter" for="mensagem">comentário</label>
-        <textarea id="mensagem" name="massage" cols="30" rows="10" placeholder="deixe seu comentário"></textarea>
-
-      <div class="botoes">
-        <button class="form-control" type="submit"> Enviar </button>
-        <button class="form-control" type="reset"> Limpar </button>
-      </div>
-      </form>
+<body>
+      <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
+  
+    <div class="container">
+        <h2>Contato</h2>
+        <form action="" method="post">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" name="nome" placeholder="digete seu nome" autocomplete="off" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="digete seu email" required>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="massage" cols="30" rows="10" placeholder="digite sua mensagem"></textarea>
+            <button id="botao_contato" type="submit">Enviar</button>
+        </form>
     </div>
-    <!-- Fim da div card -->
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script> <!--Link Bootstrap-->
+
+    <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!--Link Bootstrap-->
 </body>
 
 </html>

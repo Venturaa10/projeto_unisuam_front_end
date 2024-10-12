@@ -59,7 +59,7 @@
 
 
 .card-footer {
-    background: #1d1c1c !important;
+    background: #ffffff !important;
     color: white;
     margin-top: 50px;
     padding: 20px;
@@ -97,19 +97,27 @@
 }
 
 .nome_dev {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
     text-transform: capitalize;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    color: #000000;
 }
 
-.links_footer {
+/* .links_footer {
     color:#fff;
     font-size: 20px;
     font-weight: 800;
     text-decoration: underline;
     text-transform: capitalize;
+} */
+
+/* Estiliza os icones do footer */
+
+.lista .links_footer img {
+
+    width: 35px;  
+    height: 35px; 
 }
 
 /* Estilos especiais */
