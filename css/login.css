@@ -14,8 +14,9 @@
     justify-content: center; 
     align-items: center; 
     margin-top: 150px;
+    margin-bottom: 150px;
     height: 340px;
-    width: 40%;
+    width: 50%;
 }
 
 .card {
@@ -94,12 +95,6 @@ input:hover{
     margin-top: 15px;
 }
 
-
-.navbar-nav{
-    padding-top: 10px;
-    padding-bottom: 15px;
-
-}
 
 .alterar_senha {
     margin-top: 100px;

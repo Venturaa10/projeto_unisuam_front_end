@@ -14,8 +14,9 @@
     justify-content: center; 
     align-items: center; 
     margin-top: 150px;
-    height: 400px;
-    width: 40%;
+    margin-bottom: 150px;
+    height: 340px;
+    width: 50%;
 }
 
 .card {
@@ -28,7 +29,7 @@
     text-align: center;
     width: 100%; /* Tamanho da largura do card */
     max-width: 400px;
-    height: 120%;
+    height: 135%;
     border: none;
 }
 
@@ -46,7 +47,6 @@
     gap: 10px;
     align-items: center;
 }
-
 
 .login_label{
     color: #fff;
@@ -78,7 +78,7 @@ input:hover{
 form textarea{
     padding-bottom:40px;
     outline: none;
-    font-size: 18x;
+    font-size: 18px;
     margin-bottom: 30px;
     border-radius: 10px;
     width: 75%;  
@@ -113,12 +113,6 @@ form textarea:focus{
     border-color: #000000;
 }
 
-
-.navbar-nav{
-    padding-top: 10px;
-    padding-bottom: 15px;
-
-}
 
 .titulo_card , .login_label, .form-control, .alterar_senha, .link {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

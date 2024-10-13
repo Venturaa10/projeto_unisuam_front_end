@@ -17,133 +17,98 @@
     <div id="navbar"></div> <!-- arquivo navbar.html carrega aqui -->
 
     <div class="img_fundo">
-        <div class="container text-center">
-            <h1>Cadastro</h1>
-            <div class="row">
-                <div class="col">
-                    <form id="cepForm" action="">
+        <form id="cepForm" action="">
+            <div class="container text-center">
+                <h1>Cadastro</h1>
+                <div class="row ">
+                    <div class="full_width">
+                    <label for="nome_completo">Nome Completo</label>
+                    <input id="nome_completo" type="text" placeholder="Nome Completo" minlength="15" maxlength="80" required>
+                    </div>
 
-                        <div>
+                    <div class="full_width radio-group">
+                        <label class="label_radio" for="sexo_masculino">Masculino</label>
+                        <input name="sexo" id="sexo_masculino" class="input_radio" type="radio">
+                        <label class="label_radio" for="sexo_feminino">Feminino</label>
+                        <input name="sexo" id="sexo_feminino" class="input_radio" type="radio">
+                        <label class="label_radio" for="sexo_outros">outros</label>
+                        <input name="sexo" id="sexo_outros" class="input_radio" type="radio">
+                    </div>
 
-                            <label for="nome_completo">Nome Completo</label>
-                            <input id="nome_completo" type="text" placeholder="Nome Completo" minlength="15" maxlength="80" required>
-                         </div>
+                    <div class="col">
+                        <label for="nome_materno">Nome Materno</label>
+                        <input id="nome_materno" type="text" placeholder="Nome Materno" required>
 
-                         <div class="flex"> 
-                            <label for="sexo">masculino</label>
-                            <input type="radio">
-                            <label for="sexo">feminino</label>
-                            <input type="radio">
-                            <label for="sexo">outros</label>
-                            <input type="radio">
-                          </div>
+                        <label for="cpf">CPF</label>
+                        <input id="cpf" type="text" placeholder="CPF" required>
 
-                          <div class="displayflex">
-                            <label for="nome_materno">Nome Materno</label>
-                            <input id="nome_materno" type="text" placeholder="Nome Materno" required>
-    
-                            <label for="cpf">CPF</label>
-                            <input id="cpf" type="text" placeholder="CPF" required>
-    
-                          </div>
 
-                          <div  class="displayflex">
-                            <label for="login">Login</label>
+                        <label for="login">Login</label>
                         <input id="login" type="text" placeholder="Nome de Login" minlength="6" maxlength="6" required>
 
                         <label for="senha">Senha</label>
                         <input id="senha" type="password" placeholder="Senha" required>
 
-                          </div>
 
-                          <div class="displayflex">
-                            <label for="confirmar_senha">Confirmar Senha</label>
+                        <label for="confirmar_senha">Confirmar Senha</label>
                         <input id="confirmar_senha" type="password" placeholder="Confirmar Senha" required>
 
                         <label for="email">Email</label>
                         <input id="email" type="email" placeholder="seuemail@dominio.com" required>
-                          </div>
 
-                          <div class="displayflex">
-                        
-                                <label for="telefone_fixo">Telefone Fixo</label>
-                                <input id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX" required>
-    
-                                <label for="telefone_celular">Celular</label>
-                                <input id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX" required>
-            
-                          </div>
-                       
-                       
-                        
-                        
 
-                        
-                        <div class="col">
-                            <div class="displayflex">
-
-                                <label for="telefone_celular">Celular</label>
-                            <input id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX" required>
-
-                            <label for="cep">CEP</label>
-                            <input name="cep" id="cep" type="text" placeholder="Digite seu CEP"
-                                onblur="preencherEndereco(this)" required>
-
-                            </div>
-
-                            <div class="displayflex">
-                                <label for="endereco">Endereço</label>
-                                <input name="logradouro" id="endereco" type="text" required>
-    
-                                <label for="numero_endereco">Número</label>
-                                <input id="numero_endereco" type="text" required>
-    
-                            </div>
-                            
-                            <div class="displayflex">
-                                <label for="bairro">Bairro</label>
-                            <input name="bairro" id="bairro" type="text" required>
-
-                            <label for="cidade">Cidade</label>
-                            <input name="cidade" id="cidade" type="text" required>
-
-                            </div>
-
-                            <div class="displayflex">
-                            <label for="data_nascimento">Data de Nascimento</label>
-                            <input id="data_nascimento" type="date" placeholder="Data de Nascimento" required>
-
-                            <label for="estado">Estado</label>
-                            <input name="estado" type="text" id="estado" name="estado" required>
-                            </div>
-                           
-                            
-                        </div>
-
-                </div>
-                <div class="row">
+                        <label for="telefone_fixo">Telefone Fixo</label>
+                        <input id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX" required>
                     </div>
 
-                    <div class="colu">
+                    <div class="col">
+                        <label for="telefone_celular">Celular</label>
+                        <input id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX" required>
+
+                        <label for="cep">CEP</label>
+                        <input name="cep" id="cep" type="text" placeholder="Digite seu CEP"
+                            onblur="preencherEndereco(this)" required>
+
+
+                        <label for="endereco">Endereço</label>
+                        <input name="logradouro" id="endereco" type="text" required>
+
+                        <label for="numero_endereco">Número</label>
+                        <input id="numero_endereco" type="text" required>
+
+
+                        <label for="bairro">Bairro</label>
+                        <input name="bairro" id="bairro" type="text" required>
+
+                        <label for="cidade">Cidade</label>
+                        <input name="cidade" id="cidade" type="text" required>
+
+                        <label for="estado">Estado</label>
+                        <input name="estado" type="text" id="estado" name="estado" required>
+                    </div>
+
+                    <div class="full_width">
+                        <label for="data_nascimento">Data de Nascimento</label>
+                        <input id="data_nascimento" type="date" placeholder="Data de Nascimento" required>
+                    </div>
+
+                    <div class="col full_width">
                         <button class="btn_cadastro" type="submit">Cadastrar</button>
                         <button class="btn_cadastro" type="reset">Limpar</button>
                     </div>
-                    <div class="col">
-                        <!-- Vazio -->
-                    </div>
                 </div>
             </div>
-            </form>
-        </div>
+        </form>
+    </div>
 
-        <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
+    <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
 
-        <script src="/scripts/cep.js"></script> <!-- Valida CEP -->
-        <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
-        <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script> <!--Link Bootstrap-->
+    <script src="/scripts/cep.js"></script> <!-- Valida CEP -->
+    <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
+    <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script> <!--Link Bootstrap-->
 </body>
 
 </html>
