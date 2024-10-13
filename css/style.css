@@ -48,3 +48,58 @@ li a .img_carrinho {
     width: 30px;
     height: 30px;
 }
+
+/* Estilos do rodapé */
+.card-footer {
+    background: #ffffff !important;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-title {
+    font-size: 20px;
+    height: 40px;
+}
+
+#titulo_footer {
+    color:#9b071f;
+    text-align: left;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Rajdhani, sans-serif;
+}
+
+.conteudo_footer {
+    display: flex; 
+    flex-wrap: wrap; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.lista {
+    width: 33.33%; /* Cada item ocupará 33.33% da largura */
+    margin-top: 10px; 
+    box-sizing: border-box; 
+    padding: 8px; 
+}
+
+.nome_dev {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000000;
+}
+
+/* Estiliza os icones do footer */
+
+.lista .links_footer img {
+
+    width: 35px;  
+    height: 35px; 
+}
