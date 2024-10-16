@@ -93,5 +93,7 @@ input[type="date"] {
     text-transform: uppercase;
     width: 100%;
     padding: 10px;
-    margin: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+
 }
