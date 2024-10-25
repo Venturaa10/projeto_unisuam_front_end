@@ -1,8 +1,9 @@
+
+
 .corpo {
-     background-image: url(../img/img_index/fundo_noticias.png); 
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: #1f1e1e;
 }
+   
 
 .navbar bg-body-tertiary {
     position: fixed;
@@ -20,43 +21,44 @@
 }
 
 .card {
-    background-color:#000;
-    opacity: 70%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-color:#000; */
+    /* opacity: 70%; */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
     /* Estiliza a borda do card de login */
-    border-radius: 20px;
+    border-radius:px;
     text-align: center;
     width: 100%; /* Tamanho da largura do card */
     max-width: 400px;
-    height: 135%;
-    border: none;
+    height: 170%;
+
+
 }
 
 .titulo_card {
-    color: #fff;
+    color: #000000;
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
 }
 
-.formulario {
+.form {
     /* Centraliza os inputs do formulario e coloca um por linha */
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
 }
 
 .login_label{
-    color: #fff;
+    color: #000000;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 220px;
+    margin-right: 300px;
 
 }
 .textcenter{
-    color: #fff;
+    color: #000000;
     font-size: 18px;
     font-weight: bold;
    font-family: Arial, Helvetica, sans-serif;
@@ -64,28 +66,42 @@
 
 input {
     /* Estiliza os campos de input do login */
-    width: 75%;
+    width: 90%;
     height: 35px;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 5px;
+    background: #e2e8eb;
+    border: none;
 }
-input:hover{
+
+/* input:hover{
     border-radius: 12px;
     padding: 15px;
-}
+} */
 
 form textarea{
     padding-bottom:40px;
     outline: none;
     font-size: 18px;
     margin-bottom: 30px;
-    border-radius: 10px;
-    width: 75%;  
+    border-radius: 5px;
+    width: 90%; 
+    padding: 60px; 
+    resize: none;
+    background:  #e2e8eb;
+    border: none;
 }
 
 form textarea:focus{
     padding: px;
+}
+.span-required{
+    font-size: 12px;
+    display: none;
+    margin: 3px 0 0 1px;
+    color: var(--color-red);
 }
 
 
