@@ -1,10 +1,11 @@
 
 .corpo {
     /* background-image: url(../img/img_index/fundo_noticias.png); */
-    background-image: url(/img/img_index/fundo_noticias.png);
-
+    /* background-image: url(/img/img_index/fundo_noticias.png); */
+    /* background: ; */
     background-size: cover;
     background-repeat: no-repeat;
+    background: linear-gradient(150DEG, #ffffff, #ffffffe5, #000000);
 }
 
 .container  {
@@ -16,12 +17,14 @@
     margin: 0 auto;
     padding: 20px 0px 0;
 }
-
+  
 .card {
     height: 29rem;
     width: 29rem; 
     overflow: hidden; 
     align-items: center;
+    border: 1px solid #000000; 
+    box-shadow: 3px 3px 10px 2px #00000033;
 }
 
 .card-img-top {
@@ -34,6 +37,7 @@
 .card-body {
     padding-top: 15px;
 }
+
 
 .texto_card {
     font-size: 20px;

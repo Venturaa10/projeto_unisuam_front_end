@@ -1,7 +1,5 @@
 .corpo {
-    background-image: url(../img/img_index/fundo_noticias.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+ background-color: #1f1e1e;
 }
 
 .navbar bg-body-tertiary {
@@ -10,38 +8,38 @@
 }
 
 .container {
-    display: flex;
+    display:flex;
     justify-content: center; 
     align-items: center; 
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     height: 340px;
     width: 50%;
 }
 
 .card {
-    background-color:#000;
-    opacity: 70%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* Estiliza a borda do card de login */
-    border-radius: 20px;
-    border-width: px;
-    border: px solid #fff;
-
-    
     text-align: center;
     width: 100%; /* Tamanho da largura do card */
     max-width: 400px;
-    height: 135%;
+    height: 170%;
 }
 
 .titulo_card {
-    color: #fff;
+    color: #ff0000;
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
 }
+
+.info{
+    font-size: 15px;  /* estilização do paragrafo */
+    color: #000000;
+
+}
+.diferente{
+    color: #ff0000;/* Escolha a cor desejada */
+}
+
 
 .formulario {
     /* Centraliza os inputs do formulario e coloca um por linha */
@@ -49,28 +47,35 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    margin-top: 5%;
 }
 
 
 .login_label{
-    color: #fff;
+    color: #000000;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 220px;
+    margin-right: 300px;
 }
 
 input {
-    /* Estiliza os campos de input do login */
-    width: 75%;
+    width: 90%;
     height: 35px;
-    border-radius: 8px;
+    border-radius: 5px;
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 5px;
+    background: #e2e8eb;
+    border: none;
+    outline: none;  
 }
-input:hover{
-    border-radius: 12px;
-    padding: 15px;
+
+input:focus{
+    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+    border: 1px solid #000000;
+      
 }
+
 
 .botoes {
     /* flex -> Permite tornar o container flexivel, permitindo a organização dos elementos em linha */
@@ -81,32 +86,26 @@ input:hover{
 
 .botoes button {
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     padding: 10px 25px;
+    margin-bottom: 10px;
 }
+
 
 .form-control {
     font-weight: bold;
     color: #ffffff;
     background-color: #ff0000;
     border-radius: 10px;
-    border-color: #000000;
-    margin-top: 15px;
 }
 
 
 .alterar_senha {
-    margin-top: 100px;
+    margin-top: 30px;
     text-decoration: underline;
-    font-weight: bold;
-}
-
-.alterar_senha a {
-    text-transform: uppercase;
-    font-weight: 700;
-    color:  #c9bebe!important;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 .link {

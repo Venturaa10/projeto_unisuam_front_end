@@ -15,7 +15,7 @@
     justify-content: center; 
     align-items: center; 
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     height: 340px;
     width: 50%;
 }
@@ -26,7 +26,6 @@
     /* background-size: cover;
     background-repeat: no-repeat; */
     /* Estiliza a borda do card de login */
-    border-radius:px;
     text-align: center;
     width: 100%; /* Tamanho da largura do card */
     max-width: 400px;
@@ -36,11 +35,18 @@
 }
 
 .titulo_card {
-    color: #000000;
+    color: #ff0000;
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
 }
+
+
+p{ 
+  font-size: 15px;  /* estilização do paragrafo */
+    color: rgb(73, 70, 70);
+}
+
 
 .form {
     /* Centraliza os inputs do formulario e coloca um por linha */
@@ -61,7 +67,7 @@
     color: #000000;
     font-size: 18px;
     font-weight: bold;
-   font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input {
@@ -74,13 +80,16 @@ input {
     margin-top: 5px;
     background: #e2e8eb;
     border: none;
+    outline: none;  
+}
+input:focus{
+    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+    border: 1px solid #000000;
+      
 }
 
-/* input:hover{
-    border-radius: 12px;
-    padding: 15px;
-} */
 
+    
 form textarea{
     padding-bottom:40px;
     outline: none;
@@ -96,12 +105,13 @@ form textarea{
 
 form textarea:focus{
     padding: px;
+
 }
+
 .span-required{
     font-size: 12px;
     display: none;
-    margin: 3px 0 0 1px;
-    color: var(--color-red);
+    color: var(--color-red);  
 }
 
 
@@ -126,7 +136,6 @@ form textarea:focus{
     color: #ffffff;
     background-color: #ff0000;
     border-radius: 10px;
-    border-color: #000000;
 }
 
 
