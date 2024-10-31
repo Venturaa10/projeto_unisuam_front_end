@@ -1,0 +1,16 @@
+.secao_titulos {
+    margin-top: 20px;
+    border-top: 2px black solid;
+}
+
+.span {
+    color: black;
+}
+.progress {
+    margin: 15px;
+    width: 50%;
+}
+
+.progress-bar {
+    background-color: rgb(117, 37, 37);
+}

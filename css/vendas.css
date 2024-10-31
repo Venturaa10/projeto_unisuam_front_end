@@ -3,19 +3,8 @@
     border-top: 2px black solid;
 }
 
-.secao_titulo {
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
 .container  {
     margin-top: 3px;
-}
-
-.row {
-    width: 100%;
 }
 
 
