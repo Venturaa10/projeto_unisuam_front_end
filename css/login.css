@@ -1,5 +1,5 @@
 .corpo {
- background-color: #1f1e1e;
+ background-color: #ffffff;
 }
 
 .navbar bg-body-tertiary {
@@ -7,21 +7,21 @@
     margin-top: 590px;
 }
 
-.container {
-    display:flex;
+
+
+.card {
+    margin:0px auto;
+    display: flex;
     justify-content: center; 
     align-items: center; 
     margin-top: 150px;
     margin-bottom: 200px;
-    height: 340px;
-    width: 50%;
-}
-
-.card {
-    text-align: center;
-    width: 100%; /* Tamanho da largura do card */
-    max-width: 400px;
-    height: 170%;
+    height: 50%;
+    width: 30%;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: white;
 }
 
 .titulo_card {
@@ -32,6 +32,7 @@
 }
 
 .info{
+    text-align: center;
     font-size: 15px;  /* estilização do paragrafo */
     color: #000000;
 
@@ -59,7 +60,7 @@
 }
 
 input {
-    width: 90%;
+    width: 100%;
     height: 35px;
     border-radius: 5px;
     margin-bottom: 10px;
