@@ -1,9 +1,9 @@
 body {
-    background: #1f1e1e;
+    background: #ffffff;
 }
 
 .container {
-    background:#ffffff;
+    background: #ffffff;
     background-position: center;
     padding: 10px;
     max-width: 800px;
@@ -70,7 +70,7 @@ input[type="email"],
 input[type="password"],
 input[type="date"] {
     width: 100%;
-    background: #e2e8eb;
+    background: #949191af;
     margin-bottom: 5px;
     padding: 8px;
     border-style: solid;
@@ -88,8 +88,9 @@ input[type="date"] {
 
 .btn_cadastro {
     border-radius: 8px;
-    color: #ff0000;
-    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+    background-color: #e73434;
     font-weight: bold;
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
