@@ -1,5 +1,5 @@
 /* Destinada aos mesmos estilos usados em diferentes arquivos html */
-.navbar, .container-fluid{
+.navbar{
     background: #111111 !important;
     padding-top: 15px; 
     padding-bottom: 15px; 
@@ -42,6 +42,10 @@
 
 .nav-link:hover {
     color:  #ff0000;
+}
+#perfil {
+    margin-left:150px;
+
 }
 
 li a .img_carrinho {
