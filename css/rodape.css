@@ -1,34 +1,35 @@
 /* Estilos do rodapé */
 .card-footer {
-    background: #000000 !important;
-    color: white;
+    background: #ffffff !important;
+    color: #181717;
     margin-top: 50px;
     padding: 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 
 .conteudo-footer {
     background: none;
-    height: 100%;
     text-align: left;
     border: none;
 }
 
+
 .card-header {
-    color: white;
+    color: rgb(70, 69, 69);
     font-size: 22px;
     font-weight: bold;
 }
 
 
 .list-group-item {
-    color: white;
+    color: #474747d3;
     font-size: 18px;
     font-weight: bold;
-    margin: 25px 0px;
+    margin: 4px 0px;
     background: none;
     border: none;
 }

@@ -10,9 +10,9 @@
 
 .card {
     height: 29rem;
-    width: 18rem; 
+    width: 16rem; 
     overflow: hidden; 
-    border: 1px solid #000000; 
+    border: none;
     box-shadow: 3px 3px 10px 2px #00000033;
     margin: 20px;
 }

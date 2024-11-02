@@ -5,7 +5,12 @@
     /* background: ; */
     background-size: cover;
     background-repeat: no-repeat;
-    background: linear-gradient(150DEG, #ffffff, #ffffffe5, #000000);
+    background: #ffffff;
+}
+.barra{
+    width: 100%;
+    padding: 1%;
+    background-color: #ff0000;
 }
 
 .secao_titulo {
@@ -13,4 +18,5 @@
     margin-left: 20px;
     font-size: 30px;
     font-weight: bold;
+    border: none;
 }
