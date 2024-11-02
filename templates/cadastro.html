@@ -24,7 +24,8 @@
                 <div class="row ">
                     <div class="full_width">
                     <label for="nome_completo">Nome Completo</label>
-                    <input id="nome_completo" type="text" placeholder="Nome Completo" minlength="15" maxlength="80" required>
+                    <input id="nome_completo" type="text" placeholder="Nome Completo" minlength="15" maxlength="80">
+                    <span>preencha esse campo</span>
                     </div>
 
                     <div class="full_width radio-group">
@@ -33,64 +34,80 @@
                         <label class="label_radio" for="sexo_feminino">Feminino</label>
                         <input name="sexo" id="sexo_feminino" class="input_radio" type="radio">
                         <label class="label_radio" for="sexo_outros">outros</label>
-                        <input name="sexo" id="sexo_outros" class="input_radio" type="radio">
+                        <input name="sexo" id="sexo_outros" class="input_radio" type="radio"><br>
+                        <span>escolha uma opção</span>
                     </div>
 
                     <div class="col">
                         <label for="nome_materno">Nome Materno</label>
-                        <input id="nome_materno" type="text" placeholder="Nome Materno" required>
+                        <input id="nome_materno" type="text" placeholder="Nome Materno">
+                        <span>preencha esse campo</span>
 
                         <label for="cpf">CPF</label>
-                        <input id="cpf" type="text" placeholder="CPF" required>
+                        <input id="cpf" type="text" placeholder="CPF">
+                        <span>preencha esse campo</span>
 
 
                         <label for="login">Login</label>
-                        <input id="login" type="text" placeholder="Nome de Login" minlength="6" maxlength="6" required>
+                        <input id="login" type="text" placeholder="Nome de Login" minlength="6" maxlength="6">
+                        <span>preencha esse campo</span>
 
                         <label for="senha">Senha</label>
-                        <input id="senha" type="password" placeholder="Senha" required>
+                        <input id="senha" type="password" placeholder="Senha">
+                        <span>preencha esse campo</span>
 
 
                         <label for="confirmar_senha">Confirmar Senha</label>
-                        <input id="confirmar_senha" type="password" placeholder="Confirmar Senha" required>
+                        <input id="confirmar_senha" type="password" placeholder="Confirmar Senha">
+                        <span>preencha esse campo</span>
 
                         <label for="email">Email</label>
-                        <input id="email" type="email" placeholder="seuemail@dominio.com" required>
+                        <input id="email" type="email" placeholder="seuemail@dominio.com">
+                        <span>preencha esse campo</span>
 
 
                         <label for="telefone_fixo">Telefone Fixo</label>
-                        <input id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX" required>
+                        <input id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX">
+                        <span>preencha esse campo</span>
                     </div>
 
                     <div class="col">
                         <label for="telefone_celular">Celular</label>
-                        <input id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX" required>
+                        <input id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX">
+                        <span>preencha esse campo</span>
 
                         <label for="cep">CEP</label>
                         <input name="cep" id="cep" type="text" placeholder="Digite seu CEP"
-                            onblur="preencherEndereco(this)" required>
+                            onblur="preencherEndereco(this)">
+                            <span>preencha esse campo</span>
 
 
                         <label for="endereco">Endereço</label>
-                        <input name="logradouro" id="endereco" type="text" required placeholder="*************">
+                        <input name="logradouro" id="endereco" type="text"placeholder="*************">
+                        <span>preencha esse campo</span>
 
                         <label for="numero_endereco">Número</label>
-                        <input id="numero_endereco" type="text" required placeholder="*************">
+                        <input id="numero_endereco" type="text"placeholder="*************">
+                        <span>preencha esse campo</span>
 
 
                         <label for="bairro">Bairro</label>
-                        <input name="bairro" id="bairro" type="text" required placeholder="*************">
+                        <input name="bairro" id="bairro" type="text"placeholder="*************">
+                        <span>preencha esse campo</span>
 
                         <label for="cidade">Cidade</label>
-                        <input name="cidade" id="cidade" type="text" required placeholder="*************">
+                        <input name="cidade" id="cidade" type="text" placeholder="*************">
+                        <span>preencha esse campo</span>
 
                         <label for="estado">Estado</label>
-                        <input name="estado" type="text" id="estado" name="estado" required placeholder="*************">
+                        <input name="estado" type="text" id="estado" name="estado" placeholder="*************">
+                        <span>preencha esse campo</span>
                     </div>
 
                     <div class="full_width">
                         <label for="data_nascimento">Data de Nascimento</label>
-                        <input id="data_nascimento" type="date" placeholder="Data de Nascimento" required>
+                        <input id="data_nascimento" type="date" placeholder="Data de Nascimento">
+                        <span>preencha esse campo</span>
                     </div>
 
                     <div class="col full_width">

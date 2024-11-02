@@ -8,7 +8,8 @@ body {
     padding: 10px;
     max-width: 800px;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 150px;
+    margin-bottom: 200px;
     border-radius: 5px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
@@ -79,6 +80,11 @@ input[type="date"] {
     border-radius: 5px;
     box-sizing: border-box;
     outline: none;  
+}
+span{
+    display: flex;
+    left: 0;
+    
 }
 
 /* Estiliza o tamanho das colunas */
