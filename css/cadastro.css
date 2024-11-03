@@ -82,9 +82,8 @@ input[type="date"] {
     outline: none;  
 }
 span{
-    display: flex;
+    display: none;
     left: 0;
-    
 }
 
 /* Estiliza o tamanho das colunas */
