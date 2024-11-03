@@ -1,20 +1,25 @@
-const formulario = document.querySelector('.idformulario');
+const formulario = document.getElementById('idformulario');
 const campos = document.querySelectorAll('.input_validate');
 const spans = document.querySelectorAll('.span_mensagem');
 
-console.log(campos)
-
 formulario.addEventListener('submit', event => {
-    event.preventDefault();
     const validadores = [
         validaNome,
         validaNomeMaterno,
-        validaCPF
+        validaCPF,
+        validaLogin,
+        validaSenha,
+        validaConfirmaSenha,
+        validaEmail
     ];
     const eValido = validadores.every(validador => validador());
 
-    if (eValido) {
-        window.location = './index.html';
+    if (!eValido) {
+        event.preventDefault();
+        alert('Erro na validação do formulário!');
+    } else {
+        alert('Cadastro realizado com sucesso!');
+        // window.location = './index.html';
     }
 });
 
@@ -53,6 +58,39 @@ function validaNomeMaterno() {
 
 function validaCPF() {
     return validaCampo(2, TestaCPF(campos[2].value));
+}
+
+function validaLogin() {
+    let login = campos[3].value;
+    return validaCampo(3, apenasLetras(login));
+}
+
+function validaSenha() {
+    let senha = campos[4].value
+    if (apenasLetras(senha)) {
+        validaConfirmaSenha()
+        return validaCampo(4, senha.length === 8);
+    } else {
+        return false;
+    }
+}
+
+function validaConfirmaSenha() {
+    const senha = campos[4].value;
+    const confirmaSenha = campos[5].value;
+    return validaCampo(5, senha === confirmaSenha);
+}
+
+function validaEmail() {
+    const email = campos[6].value;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return validaCampo(6, emailRegex.test(email));
+}
+
+function apenasLetras(letras) {
+    // Função que garante que o valor informado contenha apenas letras e sem acentos.
+    let regex = /^[a-zA-Z]+$/; 
+    return regex.test(letras);
 }
 
 function TestaCPF(strCPF) {

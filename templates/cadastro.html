@@ -49,21 +49,21 @@
 
 
                         <label for="login">Login</label>
-                        <input class="input" id="login" type="text" placeholder="Nome de Login" minlength="6" maxlength="6">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="login" type="text" placeholder="Nome de Login" maxlength="6" oninput="validaLogin()">
+                        <span class="span_mensagem">O campo Login deve ter exatamente 6 caracteres alfabéticos.</span>
 
                         <label for="senha">Senha</label>
-                        <input class="input" id="senha" type="password" placeholder="Senha">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="senha" type="password" placeholder="Senha" maxlength="8" oninput="validaSenha()">
+                        <span class="span_mensagem">O campo Senha deve ter 8 caracteres alfabéticos.</span>
 
 
                         <label for="confirmar_senha">Confirmar Senha</label>
-                        <input class="input" id="confirmar_senha" type="password" placeholder="Confirmar Senha">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="confirmar_senha" type="password" placeholder="Confirmar Senha" maxlength="8" oninput="validaConfirmaSenha()">
+                        <span class="span_mensagem">Os campos da Senha e Confirma Senha devem ser iguais.</span>
 
                         <label for="email">Email</label>
-                        <input class="input" id="email" type="email" placeholder="seuemail@dominio.com">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="email" type="email" placeholder="seuemail@dominio.com" maxlength="150" oninput="validaEmail()">
+                        <span class="span_mensagem">O Email fornecido é invalido!</span>
 
 
                         <label for="telefone_fixo">Telefone Fixo</label>
