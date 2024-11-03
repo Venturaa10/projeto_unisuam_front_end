@@ -4,20 +4,33 @@
     padding-top: 15px; 
     padding-bottom: 15px; 
     padding-left: 6px;
+    
 }
 
 .container-fluid { 
     text-transform: uppercase;
+    
 
 }
-/* .navbar-text {
+#titu{
+    color: #fff;
+}
+
+.mode{
+    padding: 2px;
+    background-color: #ff0000;
+    /* background: linear-gradient(to bottom, #ff0000, #fff
+    ); */
+
+}
+.navbar-text {
     font-size: 28px;
     font-weight: 900;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-left: 60px;
     text-transform: uppercase;
     color: #fff;
-} */
+} 
 
 .collapse {
     padding-left: 30px;
