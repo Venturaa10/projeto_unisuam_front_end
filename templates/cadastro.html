@@ -40,12 +40,12 @@
 
                     <div class="col">
                         <label for="nome_materno">Nome Materno</label>
-                        <input class="input" id="nome_materno" type="text" placeholder="Nome Materno">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="nome_materno" type="text" placeholder="Nome Materno" oninput="validaNomeMaterno()">
+                        <span class="span_mensagem">Teste do campo Nome Materno</span>
 
                         <label for="cpf">CPF</label>
-                        <input class="input" id="cpf" type="text" placeholder="CPF">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" id="cpf" type="text" placeholder="CPF" maxlength="11" oninput="validaCPF()">
+                        <span class="span_mensagem">O CPF informado é invalido!</span>
 
 
                         <label for="login">Login</label>
