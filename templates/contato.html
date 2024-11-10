@@ -20,22 +20,22 @@
     <!-- Inicio da div card -->
     <div class="card">
       <div class="card-body">
-        <h1 class="titulo_card"><img src="/img//img_geral/icon_flamengo.png" alt="crf"> FLA-HELLO!</h1>
-        <br>
-        <p>Deixe seu comentário.</p>
+        <h1 class="titulo_card"><img src="/img//img_geral/icon_flamengo.png" alt="crf">FLA-HELLO!</h1>
       </div>
       
-      <form class="form" id="forme">
-        <label class="login_label" for="nome_login">Nome</label>
-        <input class="input_login" id="nome_contato" type="text" placeholder="Nome do Torcedor" minlength="6" maxlength="6" class="inputs required" oninput="nomeValide">
-        <span class="span-required">Nome deve ter no minímo 6 caracteres</span>
+      <form class="form" id="idformularioContato">
+        <label class="login_label" for="nome_login">Nome Completo</label>
+        <input class=" input_validate_contato" id="nome_contato" type="text" placeholder="Nome Completo do Torcedor" oninput="validaNomeLogin()">
+        <span class="span_mensagem_contato">O campo nome deve conter no minimo 15 caracteres!</span>
 
         <label class="login_label" for="email">Email</label>
-        <input class="input_login" id="email" type="email" placeholder="digite seu e-mal" class="inputs required">
-        <span class="span-required">Digite um email válido </span>
+        <input class="input_validate_contato" id="email" type="email" placeholder="seuemail@dominio.com" oninput="validaEmailLogin()">
+        <span class="span_mensagem_contato">O Email fornecido é invalido!</span>
 
         <label class="textcenter" for="comentario">Comentário</label>
-        <textarea class="input_login" id="comentario_contato" placeholder="deixe seu comentário" minlength="12" maxlength="115" ></textarea>
+        <textarea class="input_validate_contato" id="comentario_contato" placeholder="Deixe alguma mensagem :)" minlength="12" maxlength="115" oninput="validaComentarioLogin()"></textarea>
+        <span class="span_mensagem_contato"></span>
+        
       <div class="botoes">
         <button class="form-control" type="submit">Enviar</button>
         <button class="form-control" type="reset">Limpar</button>
@@ -47,8 +47,7 @@
 
   <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
 
-  <!-- <script src="/scripts/contato.js"></script> -->
-   <script src="/scripts/contato.js"></script>
+  <script src="/scripts/contatoValida.js"></script>
   <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
   <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

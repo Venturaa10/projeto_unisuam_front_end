@@ -94,6 +94,11 @@ input:focus {
     border: 1px solid #000000;
 }
 
+/* A mensagem de erro fica oculta inicialmente */
+.span_mensagem_contato {
+    display: none;
+}
+
 /* Textarea */
 form textarea {
     padding-bottom: 40px;
@@ -110,13 +115,6 @@ form textarea {
 
 form textarea:focus {
     padding: px;
-}
-
-/* Mensagem de Campo Obrigatório */
-.span-required {
-    font-size: 12px;
-    display: none;
-    color: var(--color-red);
 }
 
 /* Botões */
