@@ -8,57 +8,77 @@
 }
 
 
-
-.card {
-    margin:0px auto;
+/* Container Principal */
+.container {
+    margin: 0px auto;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    flex-wrap: wrap;
+    align-items: center;
     margin-top: 150px;
     margin-bottom: 200px;
-    height: 50%;
-    width: 30%;
-    border: none;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: white;
+    height: auto;
+    width: 28%;
+    box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.3);
+    border-radius: 8px;
+    background-color: #ffffff;
 }
 
+/* Card */
+.card {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: none;
+    flex: 1;
+}
+
+/* Título do Card */
 .titulo_card {
     color: #ff0000;
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
+    margin-top: 5px;
 }
 
+/* Parágrafos */
 .info{
-    text-align: center;
-    font-size: 15px;  /* estilização do paragrafo */
     color: #000000;
-
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 .diferente{
-    color: #ff0000;/* Escolha a cor desejada */
+    color: #e73434;
 }
 
-
-.formulario {
-    /* Centraliza os inputs do formulario e coloca um por linha */
+/* Formulário */
+.form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    margin-top: 5%;
+    gap: 5px;
+    align-items: flex-start; /* Alinha os itens do formulário à esquerda */
 }
 
-
-.login_label{
+/* Labels */
+.login_label {
     color: #000000;
     font-size: 18px;
     font-weight: bold;
-    margin-right: 300px;
+    text-align: left; /* Garante que o label sempre fique alinhado à esquerda */
+    width: 100%; /* Garante que o label ocupe a largura total */
+    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo do label */
 }
 
+/* Texto Centralizado */
+.textcenter {
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Inputs */
 input {
     width: 100%;
     height: 35px;
@@ -68,32 +88,45 @@ input {
     margin-top: 5px;
     background: #e2e8eb;
     border: none;
-    outline: none;  
+    outline: none;
 }
 
-input:focus{
-    transform: scale(1.05); /* Aumenta um pouco o tamanho */
+input:focus {
+    transform: scale(1.05);
     border: 1px solid #000000;
-      
 }
 
 
+/* Mensagem de Campo Obrigatório */
+.span-required {
+    font-size: 12px;
+    display: none;
+    color: var(--color-red);
+}
+
+/* Botões */
 .botoes {
-    /* flex -> Permite tornar o container flexivel, permitindo a organização dos elementos em linha */
-    display: flex; 
-    justify-content: space-between; /* Espaçamento uniforme entre os elementos*/
-    gap: 35px; /* Espaço entre os elementos */
+    display: flex;             /* Ativa o layout flex */
+    justify-content: space-between; /* Garante espaçamento uniforme entre os botões */
+    gap: 10px;                 /* Adiciona espaço entre os botões */
+    width: 70%;               /* Garante que os botões ocupem toda a largura do container */
+    margin: auto;
+    margin-bottom: 20px;
+
 }
 
 .botoes button {
     font-size: 16px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-transform: uppercase;
     padding: 10px 25px;
-    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #e73434;
+    color: white;
+    border: none;
+    text-transform: uppercase;
 }
 
 
+/* Botão de Controle */
 .form-control {
     font-weight: bold;
     color: #ffffff;
@@ -101,19 +134,118 @@ input:focus{
     border-radius: 10px;
 }
 
-
-.alterar_senha {
-    margin-top: 30px;
-    text-decoration: underline;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+/* Fontes */
+.titulo_card, .login_label, .form-control, .alterar_senha, .link {
+    font-family: Rajdhani, sans-serif;
 }
 
-.link {
-    text-decoration: none;
-    font-size: 13px;
+/* --------------------------- Media Queries para Responsividade --------------------------- */
+
+/* Para telas menores que 1200px (Desktops menores) */
+@media (max-width: 1200px) {
+    .container {
+        width: 40%; /* Aumenta a largura do container */
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .titulo_card {
+        font-size: 26px;
+    }
+
+    .botoes button {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
 }
 
-.titulo_card , .login_label, .form-control, .alterar_senha, .link {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Para telas menores que 992px (Tablets) */
+@media (max-width: 992px) {
+    .container {
+        width: 50%; /* Ajusta a largura do container */
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    .titulo_card {
+        font-size: 24px;
+    }
+
+    .form {
+        align-items: flex-start; /* Garante que os inputs fiquem alinhados à esquerda */
+    }
+
+    .login_label {
+        margin-right: 0;
+        text-align: left; /* Garante que os labels fiquem alinhados à esquerda */
+    }
+
+    .botoes {
+        flex-direction: row; /* Empilha os botões verticalmente */
+        gap: 20px;
+    }
+
+    .botoes button {
+        width: 100%; /* Os botões ocupam toda a largura */
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Para telas menores que 768px (Tablets e smartphones grandes) */
+@media (max-width: 768px) {
+    .container {
+        width: 70%; /* Ajusta para ocupar mais largura */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .titulo_card {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .form {
+        gap: 15px; /* Aumenta o espaço entre os campos do formulário */
+    }
+
+    .botoes {
+        gap: 15px; /* Reduz o espaço entre os botões */
+    }
+
+    .botoes button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Para telas menores que 480px (Smartphones pequenos) */
+@media (max-width: 480px) {
+    .container {
+        width: 90%; /* Ajusta para ocupar 90% da largura da tela */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .titulo_card {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .form input {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+
+    .botoes {
+        flex-direction: column; /* Empilha os botões */
+        gap: 15px;
+    }
+
+    .botoes button {
+        width: 100%; /* Os botões ocupam toda a largura */
+        font-size: 12px;
+        padding: 10px;
+    }
 }
