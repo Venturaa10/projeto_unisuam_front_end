@@ -1,48 +1,46 @@
 /* Estilos do rodapé */
 .card-footer {
     background: #ffffff !important;
-    color: #181717;
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    margin-top: 20px;
     width: 100%;
 }
-.grand{
-    font-size: 20px;
-    font-weight: bold;
-    
+
+.row-footer {
+    padding: 50px 150px;
 }
-
-
 .conteudo-footer {
+    color: #000000;
     background: none;
     text-align: left;
     border: none;
 }
-.sede{
-    display: flex;
-    background-color: #181717;
-    color: #ffffff;
-    padding: 50px;
-}
-.dist{
-    margin-left: 100px;
-}
 
-.card-header {
-    color: rgb(70, 69, 69);
-    font-size: 22px;
-    font-weight: bold;
-}
-
-
-.list-group-item {
-    color: #474747d3;
+.titulo_conteudo_footer {
     font-size: 18px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteudo-footer .card-footer-conteudo {
+    border: none;
+    width: 100%;
+    height: max-content;
+    margin-top: 30px;
+}
+
+.card-header, .list-group .list-group-item {
+    font-size: 16px;
     font-weight: bold;
-    margin: 4px 0px;
-    background: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    border: none;
+    width: max-content;
+}
+
+.img-footer {
+    margin-top: 50px;
+    padding: 25px 50px;
+}
+.img-thumbnail {
     border: none;
 }
