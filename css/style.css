@@ -16,6 +16,11 @@
     color: #fff;
 }
 
+#alinhar{
+    display: flex;
+    margin-left: -15px;
+}
+
 .mode{
     padding: 2px;
     background-color: #ff0000;
