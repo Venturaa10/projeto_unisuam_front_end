@@ -40,7 +40,7 @@ formulario.addEventListener('submit', event => {
 });
 
 function setError(element, span) {
-    element.style.border = '2px solid #e6336e';
+    element.style.border = '3px solid #af3030';
     span.style.display = 'block';
 }
 

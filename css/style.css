@@ -12,9 +12,6 @@
     
 
 }
-#titu{
-    color: #fff;
-}
 
 #alinhar{
     display: flex;
@@ -26,8 +23,8 @@
     background-color: #ff0000;
     /* background: linear-gradient(to bottom, #ff0000, #fff
     ); */
-
 }
+
 .navbar-text {
     font-size: 28px;
     font-weight: 900;
@@ -54,6 +51,14 @@
 .navbar-toggler-icon {
     /* Altera a cor das linhas da imagem do navbar para vermelha */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='red' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.span_mensagem, .span_mensagem_contato {
+    font-size: 14px;
+    opacity: 5;
+    font-weight: bold;
+    text-align: left;
+    color:#4b4b4b;
 }
 
 /* Estilos especiais */

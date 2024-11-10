@@ -3,14 +3,24 @@
     border-top: 2px black solid;
 }
 
-.span {
-    color: black;
+.titulo_progresso_div {
+    padding-left: 5%;
+    margin: 15px 0px;
 }
+
+.titulo_progresso {
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+}
+
 .progress {
-    margin: 15px;
     width: 50%;
 }
 
 .progress-bar {
-    background-color: #f51818;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(to right, #000000, #ad1f1f);
+
 }
