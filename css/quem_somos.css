@@ -1,27 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #ffffff;
-    background-repeat:no-repeat ;
-    background-size: cover;
-    color: #ffffff;
-}
-
 .conteiner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    margin-top: 150px;
-    margin-bottom: 200px;
 }
 
-h1 {
+.titulo_quem_somos {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
