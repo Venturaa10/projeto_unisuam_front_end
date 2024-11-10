@@ -9,7 +9,6 @@
     padding: 50px 150px;
 }
 .conteudo-footer {
-    color: #000000;
     background: none;
     text-align: left;
     border: none;
@@ -21,20 +20,42 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.conteudo-footer .card-footer-conteudo {
+.conteudo-footer .card-footer-conteudo-localizacao {
     border: none;
     width: 100%;
     height: max-content;
-    margin-top: 30px;
 }
 
-.card-header, .list-group .list-group-item {
-    font-size: 16px;
+.list-group-item, .flamengo_footer_links ,.card-header, .localizacao {
+    border: none;
+    width: max-content;
+}
+.flamengo_footer_conteudo {
+    text-align: left;
+}
+
+.flamengo_footer_links {
+    margin: 5px 0px; 
+}
+
+.flamengo_footer_links a {
+    color: black;
+    text-decoration: none;
+}
+
+.card-footer-conteudo-localizacao{
+    margin-top: 20px;
+}
+.card-footer-conteudo-flamengo {
+    margin-top: 10px;
+}
+
+
+.card-header, .localizacao {
+    font-size: 14px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     color: #000000;
-    border: none;
-    width: max-content;
 }
 
 .img-footer {
