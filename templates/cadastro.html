@@ -77,29 +77,29 @@
                         <span>preencha esse campo</span>
 
                         <label for="cep">CEP</label>
-                        <input class="input" name="cep" id="cep" type="text" placeholder="Digite seu CEP">
-                        <span>preencha esse campo</span>
+                        <input class="input input_validate" name="cep" id="cep" type="text" maxlength="8" placeholder="Digite seu CEP" oninput="validaCEP()">
+                        <span class="span_mensagem">CEP invalido</span>
 
 
                         <label for="endereco">Endereço</label>
-                        <input class="input" name="logradouro" id="endereco" type="text"placeholder="*************">
+                        <input class="input" name="logradouro" id="endereco" type="text"placeholder="">
                         <span>preencha esse campo</span>
 
                         <label for="numero_endereco">Número</label>
-                        <input class="input" id="numero_endereco" type="text"placeholder="*************">
+                        <input class="input" id="numero_endereco" type="text"placeholder="">
                         <span>preencha esse campo</span>
 
 
                         <label for="bairro">Bairro</label>
-                        <input class="input" name="bairro" id="bairro" type="text"placeholder="*************">
+                        <input class="input" name="bairro" id="bairro" type="text"placeholder="">
                         <span>preencha esse campo</span>
 
                         <label for="cidade">Cidade</label>
-                        <input class="input" name="cidade" id="cidade" type="text" placeholder="*************">
+                        <input class="input" name="cidade" id="cidade" type="text" placeholder="">
                         <span>preencha esse campo</span>
 
                         <label for="estado">Estado</label>
-                        <input class="input" name="estado" type="text" id="estado" name="estado" placeholder="*************">
+                        <input class="input" name="estado" type="text" id="estado" name="estado" placeholder="">
                         <span>preencha esse campo</span>
                     </div>
 
@@ -120,7 +120,6 @@
 
     <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
 
-    <script src="/scripts/cep.js"></script> <!-- Valida CEP -->
     <script src="/scripts/cadrastoValida.js"></script>
     <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
     <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->
