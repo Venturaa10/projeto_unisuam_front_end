@@ -8,12 +8,16 @@
 }
 
 .card {
-    height: 29rem;
-    width: 16rem; 
+    width: 100%;
+    height: 100%;
     overflow: hidden; 
     border: none;
     box-shadow: 4px 4px 10px 4px #00000033;
     margin: 20px;
+}
+
+.row {
+    align-items: center;
 }
 
 .img_div {
@@ -79,4 +83,11 @@
     font-weight: bold;
     text-transform: uppercase;
     transition: text-transform 700ms, font-weight 700ms, font-size 700ms; /* Define a duração da transição */
+}
+
+
+@media (min-width: 720px) {
+    .card {
+        /* width: 50%; */
+    }
 }

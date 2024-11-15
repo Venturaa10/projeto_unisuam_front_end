@@ -24,3 +24,9 @@
     background: linear-gradient(to right, #000000, #ad1f1f);
 
 }
+
+@media (min-width: 720px) {
+    .progress {
+    width: 100%;
+}
+}

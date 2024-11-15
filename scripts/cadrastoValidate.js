@@ -101,10 +101,8 @@ function validaEmail() {
 
 function validaCEP() {
     const cep = campos[7].value;
-    const cepRegex = /^[0-9]{5}-?[0-9]{3}$/;
 
-    if (cepRegex.test(cep)) {
-        preencherEndereco(cep); 
+    if (preencherEndereco(cep)) {
         return validaCampo(7, true);
     } else {
         return validaCampo(7, false);

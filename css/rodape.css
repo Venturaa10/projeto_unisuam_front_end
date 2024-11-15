@@ -1,18 +1,18 @@
 /* Estilos do rodapé */
 .card-footer {
-    background: #ffffff !important;
-    margin-top: 20px;
+    background: #000000 !important;
+    text-align: center;
     width: 100%;
 }
 
-.row-footer {
-    padding: 50px 150px;
+#primeiro_conteudo_footer {
+    margin: 50px 100px;
 }
-.conteudo-footer {
+
+/* #conteudo-footer {
     background: none;
-    text-align: left;
     border: none;
-}
+} */
 
 .titulo_conteudo_footer {
     font-size: 18px;
@@ -23,7 +23,12 @@
 .conteudo-footer .card-footer-conteudo-localizacao {
     border: none;
     width: 100%;
-    height: max-content;
+}
+
+.titulo_localizacao {
+    font-size: 15px;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .list-group-item, .flamengo_footer_links ,.card-header, .localizacao {
@@ -43,13 +48,6 @@
     text-decoration: none;
 }
 
-.card-footer-conteudo-localizacao{
-    margin-top: 20px;
-}
-.card-footer-conteudo-flamengo {
-    margin-top: 10px;
-}
-
 .card-header, .localizacao {
     font-size: 14px;
     font-weight: bold;
@@ -57,10 +55,12 @@
     color: #000000;
 }
 
-.img-footer {
-    margin-top: 50px;
-    padding: 25px 50px;
-}
 .img-thumbnail {
     border: none;
+}
+
+@media (min-width: 720px) {
+    .row-footer {
+        width: 50%;
+    }
 }
