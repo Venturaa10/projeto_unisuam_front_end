@@ -1,0 +1,42 @@
+/* Arquivo styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.display{
+  display: flex;
+  gap: 5px;
+}
+
+.noticiario-container {
+  position: relative;
+  max-width: 800px;
+}
+
+.noticiario-imagem {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.noticiario-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.noticiario-texto h2 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.noticiario-texto p {
+  margin: 10px 0 0;
+  font-size: 1em;
+}
