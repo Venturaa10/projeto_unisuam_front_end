@@ -27,7 +27,6 @@ formulario.addEventListener('submit', event => {
 
     const validadores = [
         validaNome,
-        validaNomeMaterno,
         validaCPF,
         validaLogin,
         validaSenha,
@@ -91,47 +90,44 @@ function validaNome() {
     return validaCampo(0, campos[0].value.length >= 15);
 }
 
-function validaNomeMaterno() {
-    return validaCampo(1, campos[1].value.length >= 10);
-}
 
 function validaCPF() {
-    return validaCampo(2, TestaCPF(campos[2].value));
+    return validaCampo(1, TestaCPF(campos[1].value));
 }
 
 function validaLogin() {
-    let login = campos[3].value;
-    return validaCampo(3, apenasLetras(login));
+    let login = campos[2].value;
+    return validaCampo(2, apenasLetras(login));
 }
 
 function validaSenha() {
-    let senha = campos[4].value;
+    let senha = campos[3].value;
     if (apenasLetras(senha)) {
         validaConfirmaSenha(); 
-        return validaCampo(4, senha.length === 8);
+        return validaCampo(3, senha.length === 8);
     } else {
         return false;
     }
 }
 
 function validaConfirmaSenha() {
-    const senha = campos[4].value;
-    const confirmaSenha = campos[5].value;
-    return validaCampo(5, senha === confirmaSenha);
+    const senha = campos[3].value;
+    const confirmaSenha = campos[4].value;
+    return validaCampo(4, senha === confirmaSenha);
 }
 
 function validaEmail() {
-    const email = campos[6].value;
+    const email = campos[5].value;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return validaCampo(6, emailRegex.test(email));
+    return validaCampo(5, emailRegex.test(email));
 }
 
 function validaCEP() {
-    const cep = campos[7].value;
+    const cep = campos[6].value;
     if (preencherEndereco(cep)) {
-        return validaCampo(7, true);
+        return validaCampo(6, true);
     } else {
-        return validaCampo(7, false);
+        return validaCampo(6, false);
     }
 }
 
@@ -141,6 +137,7 @@ function apenasLetras(letras) {
 }
 
 function TestaCPF(strCPF) {
+    
     let Soma;
     let Resto;
     Soma = 0;

@@ -1,6 +1,4 @@
-.corpo {
- background-color: #ffffff;
-}
+
 
 .navbar bg-body-tertiary {
     position: fixed;
@@ -13,13 +11,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-top: 50px;
     height: auto;
     width: 28%;
-    box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: white;
 }
 
 /* Card */
@@ -38,17 +35,13 @@
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 /* Parágrafos */
-.info{
-    color: #000000;
+p {
     font-size: 17px;
-    margin-bottom: 10px;
-}
-.diferente{
-    color: #e73434;
+    color: #000000;
 }
 
 /* Formulário */
@@ -95,12 +88,27 @@ input:focus {
     border: 1px solid #000000;
 }
 
-
-/* Mensagem de Campo Obrigatório */
-.span-required {
-    font-size: 12px;
+/* A mensagem de erro fica oculta inicialmente */
+.span_mensagem_contato {
     display: none;
-    color: var(--color-red);
+}
+
+/* Textarea */
+form textarea {
+    padding-bottom: 40px;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 60px;
+    resize: none;
+    background: #e2e8eb;
+    border: none;
+}
+
+form textarea:focus {
+    padding: px;
 }
 
 /* Botões */
@@ -236,6 +244,10 @@ input:focus {
         font-size: 14px;
     }
 
+    form textarea {
+        padding: 20px;
+        font-size: 16px;
+    }
 
     .botoes {
         flex-direction: column; /* Empilha os botões */
@@ -248,3 +260,4 @@ input:focus {
         padding: 10px;
     }
 }
+

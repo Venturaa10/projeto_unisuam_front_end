@@ -1,9 +1,6 @@
-
-
 .corpo {
-    background: #ffffff;
+ background-color: #ffffff;
 }
-   
 
 .navbar bg-body-tertiary {
     position: fixed;
@@ -16,13 +13,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-top: 50px;
     height: auto;
     width: 28%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px hsla(0, 0%, 0%, 0.3);
     border-radius: 8px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 /* Card */
@@ -41,13 +37,17 @@
     text-transform: capitalize;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 /* Parágrafos */
-p {
-    font-size: 17px;
+.info{
     color: #000000;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.diferente{
+    color: #e73434;
 }
 
 /* Formulário */
@@ -94,27 +94,12 @@ input:focus {
     border: 1px solid #000000;
 }
 
-/* A mensagem de erro fica oculta inicialmente */
-.span_mensagem_contato {
+
+/* Mensagem de Campo Obrigatório */
+.span-required {
+    font-size: 12px;
     display: none;
-}
-
-/* Textarea */
-form textarea {
-    padding-bottom: 40px;
-    outline: none;
-    font-size: 18px;
-    margin-bottom: 30px;
-    border-radius: 5px;
-    width: 100%;
-    padding: 60px;
-    resize: none;
-    background: #e2e8eb;
-    border: none;
-}
-
-form textarea:focus {
-    padding: px;
+    color: var(--color-red);
 }
 
 /* Botões */
@@ -250,10 +235,6 @@ form textarea:focus {
         font-size: 14px;
     }
 
-    form textarea {
-        padding: 20px;
-        font-size: 16px;
-    }
 
     .botoes {
         flex-direction: column; /* Empilha os botões */
@@ -266,4 +247,3 @@ form textarea:focus {
         padding: 10px;
     }
 }
-

@@ -55,7 +55,6 @@
 .valor_camisa {
     font-size: 20px;
     font-weight: bold;
-
 }
 
 .botao_div {
@@ -73,8 +72,8 @@
 
 /* Estilo do botão para visualizar a noticia */
 .botao_div:hover {
-    transform: scale(1.1);
-    transition: transform 700ms; /* Define a duração da transição */
+    transform: scale(1.0);
+    transition: transform 500ms; /* Define a duração da transição */
 }
 
 .botao_confira:hover {
@@ -86,8 +85,8 @@
 }
 
 
-@media (min-width: 720px) {
-    .card {
-        /* width: 50%; */
+@media (max-width: 720px) {
+    .row {
+       justify-content: space-between; 
     }
 }

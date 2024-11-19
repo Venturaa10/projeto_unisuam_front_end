@@ -1,5 +1,6 @@
 /* Estilos do rodapé */
 .barra_divisoria {
+    margin-top: 50px;
     background: linear-gradient(to right,#000000 , #c21717);
     height: 100px;
     width: 100%;
