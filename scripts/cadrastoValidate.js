@@ -2,15 +2,28 @@ const formulario = document.getElementById('idformulario');
 const campos = document.querySelectorAll('.input_validate');
 const spans = document.querySelectorAll('.span_mensagem');
 
-formulario.addEventListener('submit', event => {
-    /** Função responsavel por 
-     * Const "validadores" -> Lista contendo todas as funções para validação.
-     * for -> Percorre a lista, se ao menos um campo estiver invalido, "eValido" recebe "false" como valor.
-     * if e else -> Verifica o valor do "eValido", se "false" formulario não é enviado, se não formulario é enviado com sucesso.
-     * A função garante que o formulario so seja enviado em caso de todos os campos estiverem corretos.
-    */
+// Recuperar dados do localStorage e preencher campos
+window.onload = function () {
+    if (localStorage.getItem("formData")) {
+        const formData = JSON.parse(localStorage.getItem("formData"));
+        campos.forEach(campo => {
+            if (formData[campo.id]) {
+                campo.value = formData[campo.id];
+            }
+        });
 
-    let eValido = true; // true, se todos os campos forem validos.
+        // Para os campos de radio e checkbox
+        const radios = document.querySelectorAll('input[type="radio"]');
+        radios.forEach(radio => {
+            if (formData[radio.name] && radio.value === formData[radio.name]) {
+                radio.checked = true;
+            }
+        });
+    }
+};
+
+formulario.addEventListener('submit', event => {
+    let eValido = true; // true, se todos os campos forem válidos.
 
     const validadores = [
         validaNome,
@@ -23,22 +36,37 @@ formulario.addEventListener('submit', event => {
         validaCEP
     ];
 
-    // Percorre todas as funções responsaveis pelas validações dos campos.
+    // Percorre todas as funções responsáveis pelas validações dos campos.
     for (const validador of validadores) {
         if (!validador()) {
             eValido = false; // Define como inválido (false) se alguma validação falhar.
         }
     }
 
-    // Se "eValido" for "false", significa que algum campos está invalido.
     if (!eValido) {
         event.preventDefault(); 
     } else {
+        // Salva os dados no localStorage antes de enviar o formulário
+        const formData = {};
+        campos.forEach(campo => {
+            formData[campo.id] = campo.value;
+        });
+
+        // Salvar os dados dos radios
+        const radios = document.querySelectorAll('input[type="radio"]:checked');
+        radios.forEach(radio => {
+            formData[radio.name] = radio.value;
+        });
+
+        // Salva os dados no localStorage
+        localStorage.setItem("formData", JSON.stringify(formData));
+
         alert('Cadastro realizado com sucesso!');
-        // window.location = './index.html';
+        // window.location = './index.html'; // Descomente se for redirecionar após sucesso.
     }
 });
 
+// Funções de validação
 function setError(element, span) {
     element.style.border = '3px solid #af3030';
     span.style.display = 'block';
@@ -48,9 +76,8 @@ function removeError(element, span) {
     element.style.border = '';
     span.style.display = 'none';
 }
-    
+
 function validaCampo(index, condicao) {
-    /** Função responsavel por verificar se o campo é valido, e exibir uma mensagem informando.*/
     if (condicao) {
         removeError(campos[index], spans[index]);
         return true;
@@ -101,7 +128,6 @@ function validaEmail() {
 
 function validaCEP() {
     const cep = campos[7].value;
-
     if (preencherEndereco(cep)) {
         return validaCampo(7, true);
     } else {

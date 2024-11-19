@@ -12,11 +12,20 @@ body {
   position: relative;
   max-width: 800px;
 }
+.noticiario-container img {
+  width: 100%; /* Faz a imagem preencher toda a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.5s ease-in-out; /* Transição suave para o efeito de zoom */
+}
+.noticiario-container img:hover {
+  transform: scale(1.03); /* Amplia a imagem em 20% */
+}
+
 
 .noticiario-imagem {
   width: 100%;
   height: auto;
-  display: block;
+  display: flex;
 }
 
 .noticiario-texto {
