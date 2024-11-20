@@ -34,7 +34,7 @@
                         <label class="label_radio" for="sexo_feminino">Feminino</label>
                         <input name="sexo" id="sexo_feminino" class="input_radio" type="radio">
                         <label class="label_radio" for="sexo_outros">outros</label>
-                        <input name="sexo" id="sexo_outros" class="input_radio" type="radio"><br>
+                        <input name="sexo" id="sexo_outros" class="input_radio" type="radio">
                         <span>escolha uma opção</span>
                     </div>
 
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="col full_width">
-                        <button onclick="setError()" class="btn_cadastro" type="submit">Cadastrar</button>
+                        <button onclick="salvarNome(); setError()" class="btn_cadastro" type="submit" >Cadastrar</button>
                         <button class="btn_cadastro" type="reset">Limpar</button>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
     </div>
 
     <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
-
+    
     <script src="/scripts/cadrastoValidate.js"></script>
     <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
     <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->

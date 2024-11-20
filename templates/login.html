@@ -24,22 +24,22 @@
         <p class="info"><span class="diferente">Email e senha</span> para fazer login</p>
       </div>
       
-      <form class="formulario" id="loginForm" action="">
-        <label class="login_label" for="nome_login">Nome</label>
-        <input id="nome_login" type="text" placeholder="Seu Login" required>
-
-        <label class="login_label" for="email_login">Email</label>
-        <input id="email_login" type="email" placeholder="seuemail@dominio.com" required>
+      <form class="formulario" id="idformularioLogin" action="">
+        <label class="login_label" for="nome_login">Login</label>
+        <input class="input_validate" id="nome_login" type="text" maxlength="6" placeholder="Seu Login" required>
 
         <label class="login_label" for="senha_login">Senha</label>
-        <input id="senha_login" type="password" placeholder="Sua Senha" required>
+        <input class="input_validate" id="senha_login" type="password" maxlength="8" placeholder="Sua Senha" required>
+
+        <label class="login_label" for="email_login">Email</label>
+        <input class="input_validate" id="email_login" type="email" maxlength="150" placeholder="seuemail@dominio.com" required>
+
 
       <div class="botoes">
         <button class="form-control" type="submit">Entrar</button>
         <button class="form-control" type="reset">Limpar</button>
       </div>
       </form>
-      <!-- <div id="mensagemErro" style="color: red; display: none;">Usuário ou senha inválidos!</div> -->
 
       <div class="card-body">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -53,7 +53,8 @@
   </div>
 
   <div id="rodape"></div> <!-- arquivo rodape.html carrega aqui -->
-
+  
+  <script src="/scripts/loginLocalStorage.js"></script>
   <script src="/scripts/navbar.js"></script> <!-- Chama navbar -->
   <script src="/scripts/rodape.js"></script> <!-- Chama rodape -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
