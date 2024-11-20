@@ -8,24 +8,50 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent" st>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/templates/index.html">Home</a>
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"  style="background-color: #ff0000; color: #ffffff; border: none;margin-top: 5px; padding-left: 25px; padding-right: 25px;">
+                Login 
+              </button>
+              <form class="dropdown-menu p-4">
+                <div class="mb-3">
+                  <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+            </div>
           </li>
-          <li class="nav-item">
+
+          <!-- <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/templates/cadastro.html">Cadastro</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/templates/contato.html">Contato</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/templates/quem_somos.html">Quem Somos</a>
           </li>
+
            <li class="nav-item">
             <a class="nav-link" aria-current="page" href="https://www.mengo.com.br/?utm_source=portal&utm_medium=menu&utm_campaign=associese"><img class="img_carrinho" src="/img/img_navbar/icon_carrinho.png" alt="carrinho"></a>
-          </li>
-          <li id="perfil">
-            <a aria-current="page" href="/templates/login.html"> <img src="/img/img_navbar/icon_usuario.png" alt="perfil"></a>
-          </li>
+          </li> -->
+
         </ul>
       </div>
     </div>
