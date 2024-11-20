@@ -30,14 +30,14 @@ h1 {
     margin-bottom: 15%;
     color: #ff0000;
     font-size: 2rem;
-    font-family: Geneva, Tahoma, sans-serif;
+    font-family: rajdhanni,sans-serif;
     font-weight: bold;
     text-align: center;
 
 }
 
 label {
-    font-family: Arial, sans-serif;
+    font-family: rajdhanni,sans-serif;
     color: #000000;
     text-transform: capitalize;
     font-size: 17px;
@@ -68,7 +68,7 @@ input {
     width: max-content;
     font-weight: bold;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: rajdhanni,sans-serif;
     text-transform: uppercase;
     padding: 12px 20px;
     border: none;

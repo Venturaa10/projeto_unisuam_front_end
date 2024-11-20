@@ -1,61 +1,84 @@
 <!-- Inicio da Barra de Navegação -->
 <link rel="stylesheet" href="/css/css_base/navbar.css">
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <h4 class="navbar-text"> <img src="/img/img_navbar/icon_flamengo.png" alt="fla"> Clube de Regatas do Flamengo</h4> 
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div style="gap: 10px;" class="container-fluid">
+
+      <a style="text-decoration: none;" href="/templates/index.html">  <h4 class="navbar-text"> <img src="/img/img_navbar/icon_flamengo.png" alt="fla"> Clube de Regatas do Flamengo</h4> </a>
+    
+      <button  class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" st>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" st style="gap: 10px;">
 
-          <li class="nav-item">
-            <div class="dropdown">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"  style="background-color: #ff0000; color: #ffffff; border: none;margin-top: 5px; padding-left: 25px; padding-right: 25px;">
-                Login 
-              </button>
-              <form class="dropdown-menu p-4">
-                <div class="mb-3">
-                  <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-                </div>
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                    <label class="form-check-label" for="dropdownCheck2">
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-              </form>
-            </div>
-          </li>
+        <div class="dropdown">
+          <button style="background-color: #000000;  font-family: Rajdhani,sans-serif; font-size:16px; font-weight: bold;"
+                  class="btn btn-secondary dropdown-toggle" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+            FUTEBOL <!--esse é o nome do dropdown-->
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #000000;">
 
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/templates/cadastro.html">Cadastro</a>
-          </li>
+            <a  style="text-decoration: none;" href="/templates/index.html"><li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">Pagina-Inicial</button> </li></a><br> 
 
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/templates/contato.html">Contato</a>
-          </li>
+            <a style="text-decoration: none;" href="https://www.flamengo.com.br/elencos/elenco-profissional"><li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">Elenco-profissional</button></li></a><br>
 
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/templates/quem_somos.html">Quem Somos</a>
-          </li>
+            <a style="text-decoration: none;" href="https://www.flamengo.com.br/elencos/elenco-profissional"><li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">todas as Notícias</button></li></a><br>
+          
+          </ul>
+        </div>
+        <br>
+        <div class="dropdown">
+          <button style="background-color: #ff0000;  font-family: Rajdhani,sans-serif; font-size:16px; font-weight: bold; border: none;"
+                  class="btn btn-secondary dropdown-toggle" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+            SÓCIO-TORCEDOR <!--esse é o nome do dropdown-->
+          </button>
 
-           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="https://www.mengo.com.br/?utm_source=portal&utm_medium=menu&utm_campaign=associese"><img class="img_carrinho" src="/img/img_navbar/icon_carrinho.png" alt="carrinho"></a>
-          </li>
-          <li id="perfil">
-            <a aria-current="page" href="/templates/login.html"> <img src="/img/img_navbar/icon_usuario.png" alt="perfil"></a>
-          </li>
-        </ul>
+          <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #000000;">
+
+            <a style="text-decoration: none;" href="https://www.mengo.com.br/?utm_source=portal&utm_medium=menu&
+                      utm_campaign=associese"><li><button 
+               style="font-family: rajdhanni,sans-serif; font-size: 16px;" 
+               class="dropdown-item" type="button">Associe-se</button></li>
+            </a><br>
+            
+            <a style="text-decoration: none;" href="https://flamengo.superingresso.com.br/#!/home"><li><button 
+               style="font-family: rajdhanni,sans-serif; font-size: 16px;" 
+               class="dropdown-item" type="button">Ingresso</button> </li>
+            </a><br>
+            
+            <a style="text-decoration: none;" href="https://www.mengo.com.br/?utm_source=portal&utm_medium=menu&
+               utm_campaign=planos#!/planos"><li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">Planos</button></li>
+            </a><br>
+    
+          </ul>
+        </div>
+        <br>
+        <div class="dropdown" >
+          <button style="background-color: #000000; font-family: Rajdhani,sans-serif; font-size:16px; font-weight: bold;"
+                  class="btn btn-secondary dropdown-toggle" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+            CLUBE <!--esse é o nome do dropdown-->
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #000000; ">
+
+            <a style="text-decoration: none;" href="/templates/login.html"> <li><button style="font-family: rajdhanni,sans-serif;font-size: 16px;"  class="dropdown-item" type="button">LOGIN</button> </li></a> <br>
+
+            <a style="text-decoration: none;" href="https://loja.flamengo.com.br/"> <li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">LOJA</button></li></a><br>
+
+            <a style="text-decoration: none;" href="/templates/contato.html"> <li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">CONTATO</button></li></a><br>
+
+            <a style="text-decoration: none;" href="/templates/quem_somos.html"> <li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">QUEM SOMOS </button></li></a><br>
+
+            <a style="text-decoration: none;" href="https://www.flamengo.com.br/flatv"> <li><button style="font-family: rajdhanni,sans-serif; font-size: 16px;" class="dropdown-item" type="button">FLA TV</button></li></a>
+
+          </ul>
+        </div>
+
       </div>
+      <a href="/templates/cadastro.html"> <button style="background-color: #ff0000; font-weight: bold;" type="button" class="btn btn-danger">CADRASTE-SE</button> </a>
+      
     </div>
   </nav>
 <!-- Fim da Barra de Navegação
