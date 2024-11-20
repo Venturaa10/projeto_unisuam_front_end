@@ -21,11 +21,18 @@ formulario.addEventListener('submit', async event => {
         }
     }
 
-    if (!eValido) {
-        event.preventDefault();
-    } else {
+    // Se tudo estiver válido, salva no localStorage
+    if (eValido) {
+        // Armazenando no localStorage
+        localStorage.setItem('nome', campos[0].value);  // Armazenando o nome do usuário (campo 0 é o nome)
+        localStorage.setItem('login', campos[2].value);  // Armazenando o login
+        localStorage.setItem('senha', campos[3].value);  // Armazenando a senha
+        localStorage.setItem('email', campos[5].value);  // Armazenando o email
+
         alert('Cadastro realizado com sucesso!');
         // window.location = './index.html';
+    } else {
+        event.preventDefault();  // Impede o envio do formulário se a validação falhar
     }
 });
 
@@ -88,6 +95,7 @@ async function validaCEP() {
     const cep = campos[6].value;
     return await preencherEndereco(cep);
 }
+
 
 function apenasLetras(letras) {
     let regex = /^[a-zA-Z]+$/;
