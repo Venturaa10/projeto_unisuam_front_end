@@ -30,7 +30,7 @@ formulario.addEventListener('submit', event => {
         event.preventDefault(); 
     } else {
         alert('Cadastro realizado com sucesso!');
-        // window.location = './index.html';
+        window.location = './index.html';
     }
 });
 

@@ -2,28 +2,8 @@ const formulario = document.getElementById('idformulario');
 const campos = document.querySelectorAll('.input_validate');
 const spans = document.querySelectorAll('.span_mensagem');
 
-// Recuperar dados do localStorage e preencher campos
-window.onload = function () {
-    if (localStorage.getItem("formData")) {
-        const formData = JSON.parse(localStorage.getItem("formData"));
-        campos.forEach(campo => {
-            if (formData[campo.id]) {
-                campo.value = formData[campo.id];
-            }
-        });
-
-        // Para os campos de radio e checkbox
-        const radios = document.querySelectorAll('input[type="radio"]');
-        radios.forEach(radio => {
-            if (formData[radio.name] && radio.value === formData[radio.name]) {
-                radio.checked = true;
-            }
-        });
-    }
-};
-
-formulario.addEventListener('submit', event => {
-    let eValido = true; // true, se todos os campos forem válidos.
+formulario.addEventListener('submit', async event => {
+    let eValido = true;
 
     const validadores = [
         validaNome,
@@ -35,37 +15,20 @@ formulario.addEventListener('submit', event => {
         validaCEP
     ];
 
-    // Percorre todas as funções responsáveis pelas validações dos campos.
     for (const validador of validadores) {
         if (!validador()) {
-            eValido = false; // Define como inválido (false) se alguma validação falhar.
+            eValido = false;
         }
     }
 
     if (!eValido) {
-        event.preventDefault(); 
+        event.preventDefault();
     } else {
-        // Salva os dados no localStorage antes de enviar o formulário
-        const formData = {};
-        campos.forEach(campo => {
-            formData[campo.id] = campo.value;
-        });
-
-        // Salvar os dados dos radios
-        const radios = document.querySelectorAll('input[type="radio"]:checked');
-        radios.forEach(radio => {
-            formData[radio.name] = radio.value;
-        });
-
-        // Salva os dados no localStorage
-        localStorage.setItem("formData", JSON.stringify(formData));
-
         alert('Cadastro realizado com sucesso!');
-        // window.location = './index.html'; // Descomente se for redirecionar após sucesso.
+        // window.location = './index.html';
     }
 });
 
-// Funções de validação
 function setError(element, span) {
     element.style.border = '3px solid #af3030';
     span.style.display = 'block';
@@ -90,22 +53,21 @@ function validaNome() {
     return validaCampo(0, campos[0].value.length >= 15);
 }
 
-
 function validaCPF() {
     return validaCampo(1, TestaCPF(campos[1].value));
 }
 
 function validaLogin() {
     let login = campos[2].value;
-    return validaCampo(2, apenasLetras(login));
+    return validaCampo(2, apenasLetras(login) && login.length === 6);
 }
 
 function validaSenha() {
     let senha = campos[3].value;
-    if (apenasLetras(senha)) {
-        validaConfirmaSenha(); 
-        return validaCampo(3, senha.length === 8);
+    if (apenasLetras(senha) && senha.length === 8) {
+        return validaCampo(3, true); 
     } else {
+        setError(campos[3], spans[3]);
         return false;
     }
 }
@@ -122,13 +84,9 @@ function validaEmail() {
     return validaCampo(5, emailRegex.test(email));
 }
 
-function validaCEP() {
+async function validaCEP() {
     const cep = campos[6].value;
-    if (preencherEndereco(cep)) {
-        return validaCampo(6, true);
-    } else {
-        return validaCampo(6, false);
-    }
+    return await preencherEndereco(cep);
 }
 
 function apenasLetras(letras) {
@@ -137,7 +95,6 @@ function apenasLetras(letras) {
 }
 
 function TestaCPF(strCPF) {
-    
     let Soma;
     let Resto;
     Soma = 0;
@@ -164,27 +121,30 @@ function TestaCPF(strCPF) {
     return true;
 }
 
-function preencherEndereco(cep) {
+async function preencherEndereco(cep) {
     const cepFormatado = cep.replace(/\D/g, '');
-
     if (cepFormatado.length === 8) {
         const apiUrl = `https://viacep.com.br/ws/${cepFormatado}/json/`;
 
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (!data.erro) {
-                    document.getElementById('endereco').value = data.logradouro;
-                    document.getElementById('bairro').value = data.bairro;
-                    document.getElementById('cidade').value = data.localidade;
-                    document.getElementById('estado').value = data.uf;
-                    removeError(campos[7], spans[7]);
-                } else {
-                    setError(campos[7], spans[7]);
-                }
-            })
-            .catch(error => {
-                console.log('Ocorreu um erro:', error);
-            });
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+
+            if (!data.erro) {
+                document.getElementById('endereco').value = data.logradouro;
+                document.getElementById('bairro').value = data.bairro;
+                document.getElementById('cidade').value = data.localidade;
+                document.getElementById('estado').value = data.uf;
+                removeError(campos[6], spans[6]);
+                return true;  
+            } else {
+                setError(campos[6], spans[6]);
+                return false;  
+            }
+        } catch (error) {
+            console.log('Ocorreu um erro:', error);
+            return false;  
+        }
     }
+    return false;  
 }
