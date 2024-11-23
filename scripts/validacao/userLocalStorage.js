@@ -1,6 +1,7 @@
+// Função para configurar o botão de logout
 function setupLogoutButton() {
     const logoutButton = document.getElementById('logoutButton');
-    console.log('Botão de logout encontrado:', logoutButton);  
+    console.log('Botão de logout encontrado:', logoutButton);
 
     if (logoutButton) {
         logoutButton.addEventListener('click', function () {
@@ -12,7 +13,7 @@ function setupLogoutButton() {
     }
 }
 
-
+// Função para mostrar o nome do usuário se ele estiver logado
 function showUserName() {
     const userNameElement = document.getElementById('userName');
     const logoutButton = document.getElementById('logoutButton');
@@ -20,25 +21,18 @@ function showUserName() {
 
     if (isLoggedIn === 'true') {
         const loginSalvo = localStorage.getItem('login');
-        if (userNameElement) {
+        if (userNameElement && logoutButton) {
+            console.log('Botão de logout encontrado na função showUserName:', logoutButton);
             userNameElement.style.display = 'inline';  
             userNameElement.textContent = loginSalvo;  
-        }
-        if (logoutButton) {
             logoutButton.style.display = 'inline';  
-        }
-    } else {
-        if (userNameElement) {
-            userNameElement.style.display = 'none'; 
-        }
-        if (logoutButton) {
-            logoutButton.style.display = 'none';
         }
     }
 }
 
+// Espera o DOM carregar completamente antes de executar
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM completamente carregado');
-    setupLogoutButton(); 
-    showUserName();       
+    setupLogoutButton();  // Configura o botão de logout
+    showUserName();       // Mostra o nome do usuário, se logado
 });
