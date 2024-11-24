@@ -16,6 +16,7 @@ function setupLogoutButton() {
 
     if (logoutButton) {
         logoutButton.addEventListener('click', function () {
+            alert('Logout Realizado com Sucesso!');
             localStorage.removeItem('isLoggedIn'); 
             window.location.href = '/templates/login.html'; 
         });
