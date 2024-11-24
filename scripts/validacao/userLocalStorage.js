@@ -1,6 +1,3 @@
-// function setupLogoutButton() {
-//     const logoutButton = document.getElementById('logoutButton');
-//     console.log('Botão de logout encontrado:', logoutButton);  
 function setupLogoutButton() {
     /** Configurar botão de logout do site.
      * const:
@@ -17,15 +14,15 @@ function setupLogoutButton() {
     const logoutButton = document.getElementById('logoutButton');
     console.log('Botão de logout encontrado:', logoutButton); // Informar mensagem sobre a existencia do botão.
 
-//     if (logoutButton) {
-//         logoutButton.addEventListener('click', function () {
-//             localStorage.removeItem('isLoggedIn'); 
-//             window.location.href = '/templates/login.html'; 
-//         });
-//     } else {
-//         console.error('Botão de logout não encontrado no DOM');
-//     }
-// }
+    if (logoutButton) {
+        logoutButton.addEventListener('click', function () {
+            localStorage.removeItem('isLoggedIn'); 
+            window.location.href = '/templates/login.html'; 
+        });
+    } else {
+        console.error('Botão de logout não encontrado no DOM');
+    }
+}
 
 
 function showUserName() {
