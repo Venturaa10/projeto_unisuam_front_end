@@ -69,6 +69,11 @@
     border-radius: 20px;
 }
 
+.botao_confira .link_confira {
+    text-decoration: none;
+    color: #000000;
+}
+
 /* Estilos especiais */
 
 /* Estilo do botão para visualizar a noticia */

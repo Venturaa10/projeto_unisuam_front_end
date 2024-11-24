@@ -117,7 +117,7 @@ function validaNome() {
     /** Validar o campo Nome
      * -> Campo nome deve ter 15 ou mais caracteres.
      */
-    return validaCampo(0, campos[0].value.length >= 15);
+    return validaCampo(0, campos[0].value.length >= 15 && campos[0].value.length <= 80);
 }
 
 

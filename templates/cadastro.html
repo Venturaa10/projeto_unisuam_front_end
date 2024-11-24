@@ -25,7 +25,7 @@
                     <div class="full_width">
                     <label for="nome_completo">Nome Completo</label>
                     <input class="input input_validate" id="nome_completo" type="text" placeholder="Nome Completo" maxlength="80" oninput="validaNome()">
-                    <span class="span_mensagem">O campo nome deve conter no minimo 15 caracteres!</span>
+                    <span class="span_mensagem">O campo nome deve ter no mínimo 15 caracteres e no máximo 80 caracteres alfabéticos!</span>
                     </div>
 
                     <div class="full_width radio-group">
@@ -67,17 +67,17 @@
 
 
                         <label for="telefone_fixo">Telefone Fixo</label>
-                        <input class="input" id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX">
+                        <input class="input" id="telefone_fixo" type="text" placeholder="(+55) XX-XXXXXXXX" maxlength="12" minlength="11" required>
                         <span>preencha esse campo</span>
                     </div>
 
                     <div class="col">
                         <label for="telefone_celular">Celular</label>
-                        <input class="input" id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX">
+                        <input class="input" id="telefone_celular" type="text" placeholder="(+55) XX-XXXXXXXX" maxlength="12" minlength="11" required>
                         <span>preencha esse campo</span>
 
                         <label for="cep">CEP</label>
-                        <input class="input input_validate" name="cep" id="cep" type="text" maxlength="8" placeholder="Digite seu CEP" oninput="validaCEP()">
+                        <input class="input input_validate" name="cep" id="cep" type="text" maxlength="8" minlength="8" placeholder="Digite seu CEP" oninput="validaCEP()" required>
                         <span class="span_mensagem">CEP invalido</span>
 
 
@@ -105,7 +105,7 @@
 
                     <div class="full_width">
                         <label for="data_nascimento">Data de Nascimento</label>
-                        <input class="input" id="data_nascimento" type="date" placeholder="Data de Nascimento">
+                        <input class="input" id="data_nascimento" type="date" placeholder="Data de Nascimento" required>
                         <span>preencha esse campo</span>
                     </div>
 
