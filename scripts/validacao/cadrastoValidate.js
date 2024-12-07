@@ -20,6 +20,7 @@ formulario.addEventListener('submit', async event => {
      * 
      * Se não, impede o envio do formulario.
      */
+
     let eValido = true;
 
     const validadores = [
@@ -66,10 +67,12 @@ function setError(element, span, mensagem) {
      * Parametros:
      * element -> index do campo (tag "span" no HTML).
      * span -> index do span. 
+     * mensagem -> Mensagem personalizada de acordo com o campo invalido.
      * 
      * Variaveis:
      * element. -> Aplica borda ao elemento.
      * span. -> Define display "block" para o span ficar visivel.
+     * .textContent -> Exibe mensagem no span da pagina HTML de acordo com o campo invalido.
      */
     element.style.border = '3px solid #af3030';
     span.style.display = 'block';
@@ -101,7 +104,7 @@ function validaCampo(index, condicao, mensagem) {
      * 
      * Condicional:
      * Se "condição" true, chama função para ocultar "span".
-     * Se não, aplica estilo de borda e torna o span visivel.
+     * Se false, aplica estilo de borda, torna o span visivel e exibe mensagem de erro personalizada.
      * 
      * Retorno:
      * true -> Para validações validas.
@@ -213,10 +216,7 @@ async function validaCEP() {
      * await -> Pausa função até ser concluída a busca pelo CEP na API.
      */
     const cep = campos[6].value;
-    if (cep.length == 8 || cep.length == 9)
-        return await preencherEndereco(cep);
-
-    return validaCampo(6, false, 'CEP invalido!')
+    return validaCampo(6, await preencherEndereco(cep), 'CEP invalido!')
 }
 
 

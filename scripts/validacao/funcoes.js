@@ -1,10 +1,10 @@
 export function apenasLetras(letras) {
     /** Verifica padrão de string com apenas letras.
      * Parametros:
-     * letras -> String
+     * letras - String
      * 
      * Variavel:
-     * regex -> String apenas com letras.
+     * regex - String apenas com letras.
      * 
      * Retorno:
      * Verifica se "letras" contém apenas letras.
@@ -18,8 +18,8 @@ export function regexNome(nome) {
     /** Verifica se parametro "nome" está de acordo com o padrão em regex.
     * 
     * Retorna:
-    * true -> Segue o padrão do regex.
-    * false -> Não segue o padrão do regex.
+    * true - Segue o padrão do regex.
+    * false - Não segue o padrão do regex.
     */
     const regex = /^[A-Z][a-zA-ZÀ-ÿ ]{9,}$/;
     return regex.test(nome);
@@ -29,8 +29,20 @@ export function regexNome(nome) {
 export function verificaCPF(cpf) {
     /** Recebe CPF como parametro e verifica se está de acordo com o algoritmo do padrão brasileiro de documentos.
      * 
-     * Retorna:
-     * true -> Documento valido. 
+     * Variaveis:
+     * regexCpf - Aceita CPF informado com ou sem pontuações.
+     * cpfLimpo - Retira pontuações e armazena somente os números. 
+     * 
+     * Exemplos de regex validos:  
+     * 00011122233
+     * 000.111.222-33
+     * 
+     * Condições:
+     * Verifica se "cpfLimpo" não contém 11 números.
+     * 
+     * Retornos:
+     * false - Documento invalido de acordo com o padrão brasileiro.
+     * true - Documento valido. 
      */
     const regexCpf = /^(?:\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11})$/;
 
@@ -41,8 +53,6 @@ export function verificaCPF(cpf) {
     const cpfLimpo = cpf.replace(/\D/g, '');
 
     if (cpfLimpo.length !== 11) return false;
-
-    if (/^(\d)\1+$/.test(cpfLimpo)) return false;
 
     const calcularDigito = (base) => {
         let soma = 0;
@@ -61,6 +71,11 @@ export function verificaCPF(cpf) {
 
 
 export async function preencherEndereco(cep) {
+
+    if (!cep.length == 8 || !cep.length == 9) {
+        return false; 
+    }
+
     const cepFormatado = cep.replace(/\D/g, '');
     if (cepFormatado.length === 8) {
         const apiUrl = `https://viacep.com.br/ws/${cepFormatado}/json/`;
@@ -74,10 +89,8 @@ export async function preencherEndereco(cep) {
                 document.getElementById('bairro').value = data.bairro;
                 document.getElementById('cidade').value = data.localidade;
                 document.getElementById('estado').value = data.uf;
-                removeError(campos[6], spans[6]);
                 return true;  
             } else {
-                setError(campos[6], spans[6]);
                 return false;  
             }
         } catch (error) {
@@ -90,34 +103,46 @@ export async function preencherEndereco(cep) {
 
 
 export function verificaIdade(inputDate) {
-    // Obtém a data atual
+    /** Verifica se idade não é maior que 100 anos e não é uma data futura.
+     * 
+     * Variavies:
+     * dataAtual - Armazena a data atual.
+     * dataNascimento - Converte o valor "dataAtual" para um objeto Date.
+     * idade - Calcula a diferença de anos entre a data atual e a data de nascimento
+     *
+     * Condições: 
+     * Verifica se o aniversario ainda não ocorreu esse ano.
+     * Verifica se a idade está fora do intervalo permitido.
+     * 
+     * Retornos:
+     * false - Idade com data futura ou maior que 100 anos de idade.
+     * true - Idade sem data futura e menor que 100 anos de idade.
+     * 
+    */
     const dataAtual = new Date();
 
-    // Converte o valor do input para um objeto Date
     const dataNascimento = new Date(inputDate);
 
     if (isNaN(dataNascimento)) {
         return false; 
     }
 
-    // Calcula a diferença de anos entre a data atual e a data de nascimento
     const idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
 
-    // Verifica se o aniversário já ocorreu neste ano
+    // Pega o mes e dia atual e o mes e dia do nascimento do usuario.
     const mesAtual = dataAtual.getMonth();
     const diaAtual = dataAtual.getDate();
     const mesNascimento = dataNascimento.getMonth();
     const diaNascimento = dataNascimento.getDate();
 
-    // Ajusta a idade caso o aniversário ainda não tenha ocorrido neste ano
     if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
         idade--;
     }
 
     // Valida a idade
     if (idade < 0 || idade > 100) {
-        return false; // Idade fora do intervalo permitido
+        return false; 
     }
 
-    return true; // Idade válida
+    return true; 
 }
