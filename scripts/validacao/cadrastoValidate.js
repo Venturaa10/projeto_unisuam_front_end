@@ -1,3 +1,5 @@
+import { apenasLetras, regexNome, verificaCPF, preencherEndereco, verificaIdade  } from './funcoes.js';
+
 const formulario = document.getElementById('idformulario');
 const campos = document.querySelectorAll('.input_validate');
 const spans = document.querySelectorAll('.span_mensagem');
@@ -28,7 +30,8 @@ formulario.addEventListener('submit', async event => {
         validaSenha,
         validaConfirmaSenha,
         validaEmail,
-        validaCEP
+        validaCEP,
+        validaIdade
     ];
 
     for (const validador of validadores) {
@@ -57,7 +60,7 @@ formulario.addEventListener('submit', async event => {
 });
 
 
-function setError(element, span) {
+function setError(element, span, mensagem) {
     /** Estilizar o span caracterizando um input invalido.
      * 
      * Parametros:
@@ -70,6 +73,7 @@ function setError(element, span) {
      */
     element.style.border = '3px solid #af3030';
     span.style.display = 'block';
+    span.textContent = mensagem; 
 }
 
 
@@ -89,7 +93,7 @@ function removeError(element, span) {
 }
 
 
-function validaCampo(index, condicao) {
+function validaCampo(index, condicao, mensagem) {
     /** Responsabilidades
      * Parametros:
      * index -> Recebe o index do input do HTML.
@@ -107,7 +111,7 @@ function validaCampo(index, condicao) {
         removeError(campos[index], spans[index]);
         return true;
     } else {
-        setError(campos[index], spans[index]);
+        setError(campos[index], spans[index], mensagem);
         return false;
     }
 }
@@ -117,7 +121,8 @@ function validaNome() {
     /** Validar o campo Nome
      * -> Campo nome deve ter 15 ou mais caracteres.
      */
-    return validaCampo(0, campos[0].value.length >= 15 && campos[0].value.length <= 80);
+    const nome = campos[0].value
+    return validaCampo(0, regexNome(nome), 'O campo nome deve ter no mínimo 15 caracteres e no máximo 80 caracteres alfabéticos!');
 }
 
 
@@ -125,7 +130,8 @@ function validaCPF() {
     /** Validar o campo CPF
      * Função TestaCPF(valorCPF) -> Verificar se o CPF informado está de acordo com o padrão brasileiro. 
      */
-    return validaCampo(1, TestaCPF(campos[1].value));
+    const cpf = campos[1].value; 
+    return validaCampo(1, verificaCPF(cpf), 'O CPF informado é invalido!');
 }
 
 
@@ -137,7 +143,7 @@ function validaLogin() {
      * Verifica se "login" contem apenas letras e tamanho exato de 6 caracteres.
      */    
     let login = campos[2].value;
-    return validaCampo(2, apenasLetras(login) && login.length === 6);
+    return validaCampo(2, apenasLetras(login) && login.length === 6, 'O campo Login deve ter exatamente 6 caracteres alfabéticos.');
 }
 
 
@@ -153,7 +159,7 @@ function validaSenha() {
     if (apenasLetras(senha) && senha.length === 8) {
         return validaCampo(3, true); 
     } else {
-        setError(campos[3], spans[3]);
+        setError(campos[3], spans[3], 'O campo Senha deve ter 8 caracteres alfabéticos.');
         return false;
     }
 }
@@ -169,7 +175,7 @@ function validaConfirmaSenha() {
      */
     const senha = campos[3].value;
     const confirmaSenha = campos[4].value;
-    return validaCampo(4, senha === confirmaSenha);
+    return validaCampo(4, senha === confirmaSenha, 'Os campos da Senha e Confirma Senha devem ser iguais.');
 }
 
 
@@ -190,7 +196,7 @@ function validaEmail() {
      */
     const email = campos[5].value;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return validaCampo(5, emailRegex.test(email));
+    return validaCampo(5, emailRegex.test(email), 'O Email fornecido é invalido!');
 }
 
 
@@ -207,83 +213,26 @@ async function validaCEP() {
      * await -> Pausa função até ser concluída a busca pelo CEP na API.
      */
     const cep = campos[6].value;
-    return await preencherEndereco(cep);
+    if (cep.length == 8 || cep.length == 9)
+        return await preencherEndereco(cep);
+
+    return validaCampo(6, false, 'CEP invalido!')
 }
 
 
-function apenasLetras(letras) {
-    /** Verifica padrão de string com apenas letras.
-     * Parametros:
-     * letras -> String
-     * 
-     * Variavel:
-     * regex -> String apenas com letras.
-     * 
-     * Retorno:
-     * Verifica se "letras" contém apenas letras.
-     */
-    let regex = /^[a-zA-Z]+$/;
-    return regex.test(letras);
+function validaIdade() {
+    const idade = campos[7].value
+    return validaCampo(7, verificaIdade(idade), 'Informe uma idade valida!')
 }
+ 
 
 
-function TestaCPF(strCPF) {
-    /** Recebe CPF como parametro e verifica se está de acordo com o algoritmo do padrão brasileiro de documentos.
-     * 
-     * Retorna:
-     * true -> Documento valido. 
-     */
-    let Soma;
-    let Resto;
-    Soma = 0;
-
-    if (strCPF == "00000000000") return false;
-
-    for (let i = 1; i <= 9; i++) {
-        Soma += parseInt(strCPF.substring(i - 1, i)) * (11 - i);
-    }
-    Resto = (Soma * 10) % 11;
-
-    if ((Resto === 10) || (Resto === 11)) Resto = 0;
-    if (Resto !== parseInt(strCPF.substring(9, 10))) return false;
-
-    Soma = 0;
-    for (let i = 1; i <= 10; i++) {
-        Soma += parseInt(strCPF.substring(i - 1, i)) * (12 - i);
-    }
-    Resto = (Soma * 10) % 11;
-
-    if ((Resto === 10) || (Resto === 11)) Resto = 0;
-    if (Resto !== parseInt(strCPF.substring(10, 11))) return false;
-
-    return true;
-}
 
 
-async function preencherEndereco(cep) {
-    const cepFormatado = cep.replace(/\D/g, '');
-    if (cepFormatado.length === 8) {
-        const apiUrl = `https://viacep.com.br/ws/${cepFormatado}/json/`;
 
-        try {
-            const response = await fetch(apiUrl);
-            const data = await response.json();
 
-            if (!data.erro) {
-                document.getElementById('endereco').value = data.logradouro;
-                document.getElementById('bairro').value = data.bairro;
-                document.getElementById('cidade').value = data.localidade;
-                document.getElementById('estado').value = data.uf;
-                removeError(campos[6], spans[6]);
-                return true;  
-            } else {
-                setError(campos[6], spans[6]);
-                return false;  
-            }
-        } catch (error) {
-            console.log('Ocorreu um erro:', error);
-            return false;  
-        }
-    }
-    return false;  
-}
+
+
+
+
+
